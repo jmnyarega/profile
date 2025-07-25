@@ -104,7 +104,7 @@ const HamburgerSwitch = styled.input`
   }
 `
 
-const Navigation: React.FC = () => <NavigationSection>
+const Header: React.FC = () => <NavigationSection>
   <ImageSection>
     <a href='/'>
       <img src="icons/logo.svg" alt="Josiah Mokobo Nyarega" />Josiah
@@ -128,4 +128,4 @@ const Navigation: React.FC = () => <NavigationSection>
 </NavigationSection>
 
 
-export default Navigation;
+export default Header;

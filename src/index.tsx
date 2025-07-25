@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from 'react-router';
-import Layout from './components/layout';
+import Layout from './pages/layout';
 import './index.css';
 import Blogs from './pages/blogs';
 import Bookmarks from './pages/bookmarks';
