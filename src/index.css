@@ -1,13 +1,38 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --default-font: "Fira Code", monospace;
+  --primary: 199, 120, 221;
+  --white: 255, 255, 255;
+  --gray: 171, 178, 191;
+  --dark: 40, 44, 51;
+  --red: 224, 107, 116;
+  --green: 152, 195 121;
+  --yellow: 229, 192, 122;
+  --blue: 98, 174, 239;
+  --pink: 199, 120, 221;
+  --teal: 85, 182, 194;
+  --gray: 171, 178, 191;
+}
+
+body {
+  font-family: var(--default-font);
+  font-size: 1rem;
+  background-color: rgb(var(--dark));
+
+  max-width: 90rem;
+  width: 90%;
+  margin: 0 auto;
+
+  color: rgb(var(--gray));
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
 }

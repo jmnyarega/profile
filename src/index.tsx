@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Route, Routes} from 'react-router';
+import Layout from './components/layout';
 import './index.css';
-import App from './App';
+import Blogs from './pages/blogs';
+import Bookmarks from './pages/bookmarks';
+import Contact from './pages/contact';
+import Home from './pages/home';
+import Projects from './pages/projects';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
 root.render(
   <React.StrictMode>
     <App />
