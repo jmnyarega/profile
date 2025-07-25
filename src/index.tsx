@@ -14,8 +14,8 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-export default function App() {
-  return (
+root.render(
+  <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -27,12 +27,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
-}
-
-root.render(
-  <React.StrictMode>
-    <App />
   </React.StrictMode>
 );
 
