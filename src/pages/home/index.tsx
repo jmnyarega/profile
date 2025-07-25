@@ -40,7 +40,7 @@ export const Heading2 = styled.h2`
   }
 `;
 
-const Heading2Underline = styled(Heading2)`
+export const Heading2Underline = styled(Heading2)`
   position: relative;
 
   &::after {
@@ -135,7 +135,7 @@ const Projects = () =>
   <section>
     <Heading2Underline># Projects</Heading2Underline>
     <Spacer $size="2rem" />
-    <section style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 2fr))", gap: "1rem"}}>
+    <section style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "1rem"}}>
       <Project />
       <Project />
       <Project />
