@@ -20,9 +20,10 @@ width: 100%;
 }
 `;
 
-const Heading3 = styled.h3`
+export const Heading3 = styled.h3`
   font-size: 1.125rem;
   font-weight: 500;
+  line-height: 150%;
   color: rgb(var(--white));
 `;
 

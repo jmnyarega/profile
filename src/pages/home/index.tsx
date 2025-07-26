@@ -16,7 +16,7 @@ const HeroSection = styled.section`
   flex-wrap: wrap;
 `;
 
-const Heading1 = styled.h1`
+export const Heading1 = styled.h1`
   color: rgb(var(--white));
   font-weight: 600;
   letter-spacing: 0.05em;
