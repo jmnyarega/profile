@@ -1,6 +1,13 @@
 {
   "blogs": [
     {
+      "title": "WordPress for serious devs ( Part I)",
+      "url": "https://medium.com/@jmnyarega/wordpress-for-serious-devs-part-i-3d9780afe8df",
+      "excerpt": "WordPress has often been criticized for poorly built websites on the Internet. While I had a firm opinion against WordPress developers and never considered them as real developers, my view changed after I created a website using it.",
+      "published": "May 02, 2025",
+      "tags": ["WordPress", "Wordpress tools"]
+    },
+    {
       "title": "What is test-driven development?",
       "url": "https://medium.com/@jmnyarega/what-is-test-driven-development-2c890977cbc3",
       "excerpt": "Test-driven development (TDD), is an evolutionary approach to development that combines test-first development where you write a test before you write just enough production code to fulfil that test and refactoring. ",

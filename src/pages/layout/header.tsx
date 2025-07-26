@@ -106,9 +106,9 @@ const HamburgerSwitch = styled.input`
 
 const Header: React.FC = () => <NavigationSection>
   <ImageSection>
-    <a href='/'>
+    <Link to='/'>
       <img src="icons/logo.svg" alt="Josiah Mokobo Nyarega" />Josiah
-    </a>
+    </Link>
   </ImageSection>
   <HamburgerSwitch type="checkbox" id='navigation' />
   <Hamburger htmlFor='navigation'>

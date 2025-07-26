@@ -11,8 +11,8 @@ export type ProjectType = {
   liveUrl: string;
 }
 
-export type ProjectGroups<T> = {
-  [T: string]: ProjectType[]
+export type ProjectGroups = {
+  [key: string]: ProjectType[]
 }
 
 export const ProjectsGridSection = styled.section`
@@ -29,7 +29,7 @@ export const ProjectsGridSection = styled.section`
 `;
 
 const Projects = () => {
-  const [projectGroups, setProjectGroups] = useState<ProjectGroups<string>>({});
+  const [projectGroups, setProjectGroups] = useState<ProjectGroups>({});
 
   useEffect(() => {
     const getProjects = async () => {

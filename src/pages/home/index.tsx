@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import Button from "../../components/button"
 import Project from '../../components/project';
-import {ProjectGroups, ProjectsGridSection, ProjectType} from '../projects';
+import {ProjectsGridSection, ProjectType} from '../projects';
 import {useEffect, useState} from 'react';
 import {LinkTag} from '../contact';
+import {Link} from 'react-router';
 
 export const Spacer = styled.div<{$size?: string}>`
   ${props => `
@@ -121,8 +121,8 @@ const Hero = () => (
       </Heading1>
       <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
       <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
-        <Button className="button button--primary">Contact me!!</Button>
-        <Button className="button button--gray">Download CV</Button>
+        <Link to='/contact' className="button button--primary">Contact me!!</Link>
+        <LinkTag href='/' className="button button--gray">Download CV</LinkTag>
       </div>
     </IntroSection>
     <ImageSection>
@@ -188,12 +188,9 @@ const Home = () => {
 
         <Spacer $size="2rem" />
 
-        <LinkTag
-          style={{display: "flex", margin: "0 auto", maxWidth: "max-content"}}
-          className='button button--gray'
-          href='/projects'>
-          More Projects
-        </LinkTag>
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <Link to='/projects' className="button button--primary">More Projects</Link>
+        </div>
       </section>
 
       <AboutMe />

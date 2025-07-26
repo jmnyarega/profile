@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import {Heading1, Heading2, Spacer} from "../home";
-import {Heading3} from "../contact";
-import Button from "../../components/button";
+import {Heading3, LinkTag} from "../contact";
 import {useEffect, useState} from "react";
+import {TagSection} from "../../components/project";
 
 type Blog = {
   title: string;
   excerpt: string;
+  url: string;
+  published: string;
+  tags: string[]
 }
 
 const BlogSection = styled.section`
@@ -42,13 +45,14 @@ const Blogs = () => {
         <Spacer $size="3rem" />
         <div style={{display: "flex", flexWrap: "wrap", gap: "1rem"}}>
           {
-            blogs.map((blog) =>
+            blogs.sort((a, b) => new Date(b.published) > new Date(a.published) ? 1 : -1).map((blog) =>
               <BlogSection key={blog.title}>
                 <Heading3> {blog.title} </Heading3>
+                <TagSection style={{borderBottom: "1px solid"}}>{blog.tags.join(", ")}</TagSection>
+                <span style={{fontStyle: "italic", color: "rgb(var(--white))"}}>{blog.published}</span>
                 <p style={{lineHeight: "200%"}}>{blog.excerpt}</p>
                 <div style={{display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", gridTemplateRows: "masonry", marginTop: "auto"}}>
-                  <Button className="button button--primary">Contact me!!</Button>
-                  <Button className="button button--gray">Download CV</Button>
+                  <LinkTag target="_blank" className="button button--primary" href={blog.url}>Read More</LinkTag>
                 </div>
               </BlogSection>
             )

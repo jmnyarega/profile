@@ -32,7 +32,7 @@ const ProjectFooter = styled.div`
   gap: 1rem;
 `;
 
-const LanguagesSection = styled.p`
+export const TagSection = styled.p`
   border-top: 1px solid rgb(var(--gray));
   line-height: 180%;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ const Project: React.FC<ProjectType> = (props) =>
         margin: "0 auto"
       }
     } />
-    <LanguagesSection> {props.tags.join(" ")} </LanguagesSection>
+    <TagSection> {props.tags.join(" ")} </TagSection>
     <ProjectContent>
       <Heading2>{props.name}</Heading2>
       <ProjectDescription>{props.description}</ProjectDescription>
