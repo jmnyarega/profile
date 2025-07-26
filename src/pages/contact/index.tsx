@@ -27,6 +27,18 @@ export const Heading3 = styled.h3`
   color: rgb(var(--white));
 `;
 
+const LinkTag = styled.a`
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  font: inherit;
+  color: inherit;
+  transition: all .2s linear;
+
+  &:hover {
+    color: rgb(var(--white));
+  }
+`;
+
 const Contact = () =>
   <div>
     <Spacer $size="6rem" />
@@ -46,8 +58,8 @@ const Contact = () =>
             <Heading3>Message me here</Heading3>
             <Spacer $size="1rem" />
             <ul style={{listStylePosition: "inside", listStyleType: "''", display: "flex", flexDirection: "column", gap: "1rem"}}>
-              <li>[] <a href="mailto:jmnyarega@gmail.com">jmnyarega@gmail.com</a> </li>
-              <li>[] <a href="tel:+254 703 922 095"> +254 703 922 095 </a> </li>
+              <li>[] <LinkTag target="_blank" href="mailto:jmnyarega@gmail.com">jmnyarega@gmail.com</LinkTag> </li>
+              <li>[] <LinkTag target="_blank" href="tel:+254 703 922 095"> +254 703 922 095 </LinkTag> </li>
             </ul>
             <Spacer $size="0.5rem" />
           </div>
@@ -59,10 +71,10 @@ const Contact = () =>
       <Spacer $size="2rem" />
       <div>
         <ul style={{listStylePosition: "inside", listStyleType: "''", display: "grid", gridTemplateColumns: "1fr 1fr", maxWidth: "60ch", gap: "1rem"}}>
-          <li>[] <a href="https://github.com/jmnyarega">Github</a></li>
-          <li>[] <a href="http://www.linkedin.com/in/josiah-n-84820a103/">LinkedIn</a></li>
-          <li>[] <a href="https://stackoverflow.com/users/8013307/josiah-nyarega">Stack Overflow</a> </li>
-          <li>[] <a href="https://www.frontendmentor.io/profile/jmnyarega">Frontend Mentor</a> </li>
+          <li>[] <LinkTag target="_blank" href="https://github.com/jmnyarega">Github</LinkTag></li>
+          <li>[] <LinkTag target="_blank" href="http://www.linkedin.com/in/josiah-n-84820a103/">LinkedIn</LinkTag></li>
+          <li>[] <LinkTag target="_blank" href="https://stackoverflow.com/users/8013307/josiah-nyarega">Stack Overflow</LinkTag> </li>
+          <li>[] <LinkTag target="_blank" href="https://www.frontendmentor.io/profile/jmnyarega">Frontend Mentor</LinkTag> </li>
         </ul>
       </div>
     </section>
