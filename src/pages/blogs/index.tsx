@@ -23,7 +23,7 @@ const Blogs = () => {
 
   useEffect(() => {
     const getBlogs = async () => {
-      const blogs = (await import("../../data.json")).default;
+      const {blogs} = (await import("../../data.json")).default;
       setBlogs(blogs);
     }
     getBlogs();

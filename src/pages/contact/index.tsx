@@ -27,7 +27,7 @@ export const Heading3 = styled.h3`
   color: rgb(var(--white));
 `;
 
-const LinkTag = styled.a`
+export const LinkTag = styled.a`
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   font: inherit;

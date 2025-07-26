@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import Button from "../../components/button"
 import Project from '../../components/project';
+import {ProjectGroups, ProjectsGridSection, ProjectType} from '../projects';
+import {useEffect, useState} from 'react';
+import {LinkTag} from '../contact';
 
 export const Spacer = styled.div<{$size?: string}>`
   ${props => `
@@ -131,22 +134,6 @@ const Hero = () => (
   </HeroSection>
 )
 
-const Projects = () =>
-  <section>
-    <Heading2Underline># Projects</Heading2Underline>
-    <Spacer $size="2rem" />
-    <section style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "1rem"}}>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-    </section>
-  </section>
-
 const AboutMe = () => <section>
   <Spacer />
   <Heading2Underline># Who is Josiah? </Heading2Underline>
@@ -176,11 +163,43 @@ const Skills = () =>
     </ul>
   </section>
 
-const Home = () => <>
-  <Hero />
-  <Projects />
-  <AboutMe />
-  <Skills />
-</>
+const Home = () => {
+  const [projects, setProjects] = useState<ProjectType[]>([]);
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const projectGroups = (await import("../../data.json")).default.projects;
+      setProjects(projectGroups["complete applications"]);
+    }
+    getProjects();
+  }, []);
+
+  return (
+    <>
+      <Hero />
+      <section>
+        <Heading2Underline># Projects</Heading2Underline>
+        <Spacer $size="2rem" />
+        <ProjectsGridSection>
+          {
+            projects.map(project => <Project {...project} />)
+          }
+        </ProjectsGridSection>
+
+        <Spacer $size="2rem" />
+
+        <LinkTag
+          style={{display: "flex", margin: "0 auto", maxWidth: "max-content"}}
+          className='button button--gray'
+          href='/projects'>
+          More Projects
+        </LinkTag>
+      </section>
+
+      <AboutMe />
+      <Skills />
+    </>
+  )
+}
 
 export default Home;

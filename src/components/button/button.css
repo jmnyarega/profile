@@ -4,6 +4,7 @@
   outline: none;
   padding: 1em;
   margin: 0;
+  text-decoration: none !important;
   line-height: 120%;
 
   background-color: rgb(var(--background));

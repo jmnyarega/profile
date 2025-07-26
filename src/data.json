@@ -1,52 +1,160 @@
-[
-  {
-    "title": "What is test-driven development?",
-    "url": "https://medium.com/@jmnyarega/what-is-test-driven-development-2c890977cbc3",
-    "excerpt": "Test-driven development (TDD), is an evolutionary approach to development that combines test-first development where you write a test before you write just enough production code to fulfil that test and refactoring. ",
-    "published": "Jun 13, 2017",
-    "tags": [
-      "Testing",
-      "TDD"
-    ]
-  },
-  {
-    "title": "Styling Audio tag",
-    "url": "https://medium.com/@jmnyarega/styling-audio-tag-bec5e2489d22",
-    "excerpt": "As a frontend developer, one of my biggest frustration is to style replaced elements. It can be a daunting task when on deadlines with designs to match.",
-    "published": "Sep 15, 2020",
-    "tags": [
-      "HTML",
-      "audio-tag"
-    ]
-  },
-  {
-    "title": "Git Commands I learnt this week",
-    "url": "https://medium.com/@jmnyarega/git-commands-i-learnt-this-week-654aeb774c2e",
-    "excerpt": "Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development",
-    "published": "Jul 15, 2020",
-    "tags": [
-      "Git",
-      "Github"
-    ]
-  },
-  {
-    "title": "What I know about object-oriented programming",
-    "url": "https://medium.com/@jmnyarega/what-i-know-about-object-oriented-programming-ba38571f1b1b",
-    "excerpt": "It is a programming paradigm based on the concept of, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods",
-    "published": "Jun 14, 2017",
-    "tags": [
-      "OOP",
-      "software design"
-    ]
-  },
-  {
-    "title": "Version Control(Git)",
-    "url": "https://medium.com/@jmnyarega/andela-bootcamp-experience-b0f2d3ef49bd",
-    "excerpt": "This is a software that helps software developers to work together and maintain a complete history of their work.",
-    "published": "Oct 10, 2016",
-    "tags": [
-      "Git",
-      "Github"
+{
+  "blogs": [
+    {
+      "title": "What is test-driven development?",
+      "url": "https://medium.com/@jmnyarega/what-is-test-driven-development-2c890977cbc3",
+      "excerpt": "Test-driven development (TDD), is an evolutionary approach to development that combines test-first development where you write a test before you write just enough production code to fulfil that test and refactoring. ",
+      "published": "Jun 13, 2017",
+      "tags": [
+        "Testing",
+        "TDD"
+      ]
+    },
+    {
+      "title": "Styling Audio tag",
+      "url": "https://medium.com/@jmnyarega/styling-audio-tag-bec5e2489d22",
+      "excerpt": "As a frontend developer, one of my biggest frustration is to style replaced elements. It can be a daunting task when on deadlines with designs to match.",
+      "published": "Sep 15, 2020",
+      "tags": [
+        "HTML",
+        "audio-tag"
+      ]
+    },
+    {
+      "title": "Git Commands I learnt this week",
+      "url": "https://medium.com/@jmnyarega/git-commands-i-learnt-this-week-654aeb774c2e",
+      "excerpt": "Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development",
+      "published": "Jul 15, 2020",
+      "tags": [
+        "Git",
+        "Github"
+      ]
+    },
+    {
+      "title": "What I know about object-oriented programming",
+      "url": "https://medium.com/@jmnyarega/what-i-know-about-object-oriented-programming-ba38571f1b1b",
+      "excerpt": "It is a programming paradigm based on the concept of, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods",
+      "published": "Jun 14, 2017",
+      "tags": [
+        "OOP",
+        "software design"
+      ]
+    },
+    {
+      "title": "Version Control(Git)",
+      "url": "https://medium.com/@jmnyarega/andela-bootcamp-experience-b0f2d3ef49bd",
+      "excerpt": "This is a software that helps software developers to work together and maintain a complete history of their work.",
+      "published": "Oct 10, 2016",
+      "tags": [
+        "Git",
+        "Github"
+      ]
+    }
+  ],
+  "projects": {
+    "complete applications": [
+      {
+        "name": "Cable Masters",
+        "description": "Provides solutions with which installations in industry, utility and infrastructure can be realized as quickly, safely and efficiently as possible. Cablemaster expertise and dedication go-to partner for safe and reliable installations.",
+        "code": "",
+        "liveUrl": "https://cablemasters.nl/",
+        "thumbnail": "https://cablemasters.nl/wp-content/uploads/2023/10/cropped-logo.webp",
+        "tags": [
+          "ReactJs",
+          "Javascript",
+          "PHP",
+          "Wordpress/Divi"
+        ]
+      },
+      {
+        "name": "Nobeach",
+        "description": "Nobeach is a Dutch travel agency website that specializes in beach-free vacations. They offer alternative vacation options that do not involve spending time at the beach",
+        "code": "",
+        "liveUrl": "https://www.nobeach-reizen.nl/",
+        "thumbnail": "images/no-beach.svg",
+        "tags": [
+          "ReactJs",
+          "Javascript",
+          "PHP",
+          "Wordpress/Divi"
+        ]
+      },
+      {
+        "name": "Geefinzicht",
+        "description": "This platform helps individuals connect with experts who can provide assistance with various health and wellness issues. The website features a diverse group of experts, including therapists, coaches, and healers, who offer guidance and support for a range of topics, from mental health to personal growth.",
+        "code": "",
+        "liveUrl": "http://geefinzicht.nl/",
+        "thumbnail": "images/geef-inzicht.png",
+        "tags": [
+          "Laravel",
+          "javascript",
+          "Wordpress/Bedrock"
+        ]
+      },
+      {
+        "name": "Sportways",
+        "description": "SportWays offers a range of hockey camps for players of all ages and skill levels.",
+        "code": "",
+        "liveUrl": "https://sportways.com/",
+        "thumbnail": "images/sportways-logo.png",
+        "tags": [
+          "Vuejs",
+          "Symfony",
+          "Javascript"
+        ]
+      },
+      {
+        "name": "Quirkycoders",
+        "description": "The project aims to help developers find new career opportunities by providing a platform to search for tech jobs.",
+        "liveUrl": "https://www.quirkycoders.com/",
+        "code": "",
+        "thumbnail": "images/quirkycoders.png",
+        "tags": [
+          "ReactJs",
+          "javascript",
+          "NodeJs"
+        ]
+      }
+    ],
+    "small projects": [
+      {
+        "name": "Our Giving Board",
+        "description": "The platform enables users to contribute funds in an help each other in turns",
+        "liveUrl": "",
+        "code": "https://github.com/jmnyarega/ourgivingboard-web",
+        "thumbnail": "images/gifting-project.jpeg",
+        "tags": [
+          "ReactJs",
+          "javascript",
+          "Ruby"
+        ]
+      },
+      {
+        "name": "Wazi",
+        "description": "The webpage promotes an anonymous digital therapy service that allows users to talk to a certified Kenyan therapist over the phone or through video/audio calls.",
+        "code": "",
+        "liveUrl": "https://www.wazi.co/",
+        "thumbnail": "https://static.wixstatic.com/media/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png/v1/fill/w_374,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png",
+        "tags": [
+          "ReactJs",
+          "Typescript",
+          "Laravel"
+        ]
+      }
+    ],
+    "open source projects": [
+      {
+        "name": "Kentekencheck Search",
+        "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
+        "code": "",
+        "liveUrl": "https://www.kentekencheck.nu/zoek",
+        "thumbnail": "images/kentekencheck-logo-1.png",
+        "tags": [
+          "Laravel",
+          "Typescript",
+          "Elastic Search"
+        ]
+      }
     ]
   }
-]
+}
