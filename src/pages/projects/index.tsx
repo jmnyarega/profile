@@ -58,7 +58,7 @@ const Projects = () => {
               </Heading2>
               <Spacer $size="2rem" />
               <ProjectsGridSection>
-                {projectGroups[projectGroupName].map(project => <Project {...project} />)}
+                {projectGroups[projectGroupName].map(project => <Project key={project.name} {...project} />)}
               </ProjectsGridSection>
             </section>
             <Spacer $size="4rem" />
