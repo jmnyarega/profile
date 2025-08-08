@@ -19,8 +19,8 @@ export const ProjectsGridSection = styled.section`
   display: grid;
   gap: 2rem;
 
-  @media(min-width: 40rem) {
-    grid-template-columns: auto auto;
+  @media(min-width: 50rem) {
+    grid-template-columns: 1fr 1fr;
   }
 
   @media(min-width: 75rem) {

@@ -1,4 +1,4 @@
-import {Link} from "react-router";
+import { Link } from "react-router";
 import styled from 'styled-components'
 
 const NavigationSection = styled.section`
@@ -118,11 +118,12 @@ const Header: React.FC = () => <NavigationSection>
   </Hamburger>
   <NavigationLinks>
     <ListItems>
-      <ListItem> <Link to="/"><span style={{color: "rgb(var(--primary))"}}>#</span>home</Link> </ListItem>
-      <ListItem> <Link to="/blogs"><span style={{color: "rgb(var(--primary))"}}>#</span>blogs</Link> </ListItem>
-      <ListItem> <Link to="/projects"><span style={{color: "rgb(var(--primary))"}}>#</span>projects</Link> </ListItem>
-      <ListItem> <Link to="/bookmarks"><span style={{color: "rgb(var(--primary))"}}>#</span>bookmarks</Link> </ListItem>
-      <ListItem> <Link to="/contact"><span style={{color: "rgb(var(--primary))"}}>#</span>contact</Link> </ListItem>
+      <ListItem> <Link to="/"><span style={{ color: "rgb(var(--primary))" }}>#</span>home</Link> </ListItem>
+      <ListItem> <Link to="/blogs"><span style={{ color: "rgb(var(--primary))" }}>#</span>blogs</Link> </ListItem>
+      <ListItem> <Link to="/resume"><span style={{ color: "rgb(var(--primary))" }}>#</span>resume</Link> </ListItem>
+      <ListItem> <Link to="/projects"><span style={{ color: "rgb(var(--primary))" }}>#</span>projects</Link> </ListItem>
+      <ListItem> <Link to="/bookmarks"><span style={{ color: "rgb(var(--primary))" }}>#</span>bookmarks</Link> </ListItem>
+      <ListItem> <Link to="/contact"><span style={{ color: "rgb(var(--primary))" }}>#</span>contact</Link> </ListItem>
     </ListItems>
   </NavigationLinks>
 </NavigationSection>

@@ -3,7 +3,6 @@ import { Heading1, Heading2, Spacer } from "../home";
 import { Heading3, LinkTag } from "../contact";
 import { useEffect, useState } from "react";
 import { TagSection } from "../../components/project";
-import { ProjectsGridSection } from "../projects";
 
 type Blog = {
   title: string;
@@ -19,7 +18,6 @@ const BlogSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 45ch;
 `;
 
 const Blogs = () => {
@@ -44,7 +42,7 @@ const Blogs = () => {
       <section>
         <Heading2><span style={{ color: "rgb(var(--primary))" }}>#</span>All Blogs</Heading2>
         <Spacer $size="3rem" />
-        <ProjectsGridSection>
+        <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
           {
             blogs.sort((a, b) => new Date(b.published) > new Date(a.published) ? 1 : -1).map((blog) =>
               <BlogSection key={blog.title}>
@@ -58,7 +56,7 @@ const Blogs = () => {
               </BlogSection>
             )
           }
-        </ProjectsGridSection>
+        </div>
       </section>
     </div>
   )
