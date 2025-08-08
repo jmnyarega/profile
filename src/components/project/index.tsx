@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {Heading2} from '../../pages/home';
-import {ProjectType} from '../../pages/projects';
-import {LinkTag} from '../../pages/contact';
+import { Heading2 } from '../../pages/home';
+import { ProjectType } from '../../pages/projects';
+import { LinkTag } from '../../pages/contact';
 
 const ProjectSectionContainer = styled.section`
   border: 1px solid rgb(var(--gray));

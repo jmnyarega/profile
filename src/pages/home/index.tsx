@@ -1,11 +1,16 @@
+import { Link } from 'react-router';
+import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components'
-import Project from '../../components/project';
-import {ProjectsGridSection, ProjectType} from '../projects';
-import {useEffect, useState} from 'react';
-import {LinkTag} from '../contact';
-import {Link} from 'react-router';
 
-export const Spacer = styled.div<{$size?: string}>`
+import Project from '../../components/project';
+import { ProjectsGridSection, ProjectType } from '../projects';
+import { LinkTag } from '../contact';
+
+type SkillSet = {
+  [key: string]: string[]
+}
+
+export const Spacer = styled.div<{ $size?: string }>`
   ${props => `
       margin: ${props.$size || "3rem"} 0;
   `};
@@ -113,16 +118,16 @@ const ImageSection = styled.div`
   gap: 3rem;
 `;
 
-const Hero = () => (
+const Hero = ({ cv }: { cv: string }) => (
   <HeroSection>
     <IntroSection>
       <Heading1>Josiah is a
         <AccentHeading1> web designer </AccentHeading1> and <AccentHeading1> front-end developer</AccentHeading1>
       </Heading1>
       <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
-      <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
         <Link to='/contact' className="button button--primary">Contact me!!</Link>
-        <LinkTag href='/' className="button button--gray">Download CV</LinkTag>
+        <LinkTag href={cv} target='_blank' className="button button--gray">Download CV</LinkTag>
       </div>
     </IntroSection>
     <ImageSection>
@@ -134,67 +139,60 @@ const Hero = () => (
   </HeroSection>
 )
 
-const AboutMe = () => <section>
+const AboutMe = ({ myInfo }: { myInfo: string[] }) => <section>
   <Spacer />
   <Heading2Underline># Who is Josiah? </Heading2Underline>
   <Spacer $size='2rem' />
-  <p style={{lineHeight: "180%", color: "rgb(var(--white))"}}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet arcu semper, tincidunt nibh quis, tristique dui. Pellentesque egestas ligula vel porttitor scelerisque. Vestibulum euismod, sem eu aliquam consequat, nibh metus tempus lacus, a fringilla quam mi et nisi. Fusce aliquam dolor eget velit tincidunt luctus ut non erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas scelerisque urna et auctor scelerisque. Aenean laoreet convallis cursus. Donec tincidunt luctus turpis non aliquam. Aenean convallis libero et dictum bibendum. Nullam id congue ex. Pellentesque in metus pellentesque, ultricies felis eu, imperdiet quam. Aliquam velit metus, vestibulum at lacus quis, efficitur accumsan erat. Nunc elementum elit ac nunc tincidunt feugiat. Etiam laoreet mauris nec leo malesuada, non efficitur urna pretium.
-  </p>
-  <Spacer $size="1rem" />
-  <p style={{lineHeight: "180%", color: "rgb(var(--white))"}}>
-    Pellentesque laoreet eros ac massa rhoncus, eget congue quam tempus. Phasellus vulputate metus sed lorem consequat, vel scelerisque neque malesuada. Proin id nisl egestas, fringilla lorem ultrices, ultrices quam. Morbi sem ipsum, vulputate mollis tincidunt non, feugiat eu erat. Mauris pretium aliquet sem a aliquet. Aenean pretium felis id magna facilisis volutpat. Etiam metus quam, faucibus sed dictum id, dapibus non augue.
-  </p>
-  <Spacer $size="1rem" />
-  <p style={{lineHeight: "180%", color: "rgb(var(--white))"}}>
-    Nulla facilisi. In et orci nisi. Fusce a arcu eget lectus eleifend malesuada quis sit amet nibh. Quisque eu lobortis tortor. Curabitur pretium metus in lorem interdum, nec iaculis nulla ullamcorper. Nullam quis ante venenatis purus aliquet suscipit. Fusce pulvinar sem in ipsum ornare luctus. Nam luctus urna ac ornare sollicitudin. Nulla feugiat hendrerit vestibulum.
-  </p>
+  <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+    {myInfo.map(info => <p style={{ lineHeight: "180%", color: "rgb(var(--white))" }}> {info} </p>)}
+  </div>
 </section>
 
-const Skills = () =>
+const Skills: React.FC<{ skills: SkillSet }> = ({ skills }) =>
   <section>
     <Spacer $size='2rem' />
     <Heading2Underline># My Skills</Heading2Underline>
     <Spacer />
-    <ul style={{lineHeight: "180%", color: "rgb(var(--white))", listStyleType: "' -> '", listStylePosition: "inside"}}>
-      <li>ReactJS, Redux, Typescript, NodeJs</li>
-      <li>Laravel, PHP, Livewire, Symfony</li>
-      <li>WordPress, DIVI, Elementor, WooCommerce, Plugins</li>
+    <ul style={{ lineHeight: "180%", color: "rgb(var(--white))", listStyleType: "' -> '", listStylePosition: "inside" }}>
+      {Object.keys(skills).map((skill) =>
+        <li key={skill}>
+          <b style={{ textTransform: "capitalize" }}>{skill} </b>
+          {"<>"} {skills[skill].join(", ")}
+        </li>
+      )}
     </ul>
   </section>
 
 const Home = () => {
   const [projects, setProjects] = useState<ProjectType[]>([]);
+  const [skills, setSkills] = useState<SkillSet>({});
+  const [info, setInfo] = useState<string[]>([]);
+  const [cvDownloadLink, setCvDownloadLink] = useState("");
 
-  useEffect(() => {
-    const getProjects = async () => {
-      const projectGroups = (await import("../../data.json")).default.projects;
-      setProjects(projectGroups["complete applications"]);
-    }
-    getProjects();
+  const getData = useCallback(async () => {
+    const { projects, skills, info, cv_download_link } = (await import("../../data.json")).default;
+    setProjects(projects["complete applications"]);
+    setSkills(skills);
+    setInfo(info);
+    setCvDownloadLink(cv_download_link);
   }, []);
-
+  useEffect(() => { getData() }, [getData]);
   return (
     <>
-      <Hero />
+      <Hero cv={cvDownloadLink} />
       <section>
         <Heading2Underline># Projects</Heading2Underline>
         <Spacer $size="2rem" />
         <ProjectsGridSection>
-          {
-            projects.map(project => <Project {...project} />)
-          }
+          {projects.map(project => <Project {...project} />)}
         </ProjectsGridSection>
-
         <Spacer $size="2rem" />
-
-        <div style={{display: "flex", justifyContent: "center"}}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <Link to='/projects' className="button button--primary">More Projects</Link>
         </div>
       </section>
-
-      <AboutMe />
-      <Skills />
+      <AboutMe myInfo={info} />
+      <Skills skills={skills} />
     </>
   )
 }

@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Project from "../../components/project";
-import {Heading2, Spacer} from "../home";
+import { Heading2, Spacer } from "../home";
 import styled from "styled-components";
 
 export type ProjectType = {
@@ -18,9 +18,9 @@ export type ProjectGroups = {
 export const ProjectsGridSection = styled.section`
   display: grid;
   gap: 2rem;
-  
-  @media(min-width: 50rem) {
-    grid-template-columns: 1fr 1fr;
+
+  @media(min-width: 40rem) {
+    grid-template-columns: auto auto;
   }
 
   @media(min-width: 75rem) {
@@ -42,7 +42,7 @@ const Projects = () => {
   return (
     <div>
       <Spacer $size="6rem" />
-      <Heading2><span style={{color: "rgb(var(--primary))"}}>/</span>projects</Heading2>
+      <Heading2><span style={{ color: "rgb(var(--primary))" }}>/</span>projects</Heading2>
 
       <Spacer $size="0.5rem" />
       <p>List of my projects</p>
@@ -52,8 +52,8 @@ const Projects = () => {
         Object.keys(projectGroups).map(projectGroupName =>
           <div key={projectGroupName}>
             <section>
-              <Heading2 style={{textTransform: "capitalize"}}>
-                <span style={{color: "rgb(var(--primary))"}}>#</span>
+              <Heading2 style={{ textTransform: "capitalize" }}>
+                <span style={{ color: "rgb(var(--primary))" }}>#</span>
                 {projectGroupName}
               </Heading2>
               <Spacer $size="2rem" />
