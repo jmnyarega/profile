@@ -1,53 +1,68 @@
-import {useState} from 'react';
-import {Document, Page, pdfjs} from 'react-pdf';
+import {Viewer, RenderPageProps, ProgressBar, PdfJs} from '@react-pdf-viewer/core';
+import {Worker} from '@react-pdf-viewer/core';
 import {Heading1, Spacer} from '../home';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
-
 const Resume = () => {
-  const [numPages, setNumPages] = useState<number>(0);
-  const [pageNumber, setPageNumber] = useState<number>(1);
+    const renderPage = (props: RenderPageProps) => (
+        <>
+            {props.canvasLayer.children}
+            <div
+                style={{
+                    display: 'flex',
+                    height: '100%',
+                    justifyContent: 'center',
+                    left: 0,
+                    top: 0,
+                    position: 'absolute',
+                    width: '100%',
+                }}
+            >
+                <div
+                    style={{
+                        color: 'rgb(var(--dark))',
+                        fontSize: `${1.5 * props.scale}rem`,
+                        fontWeight: 'regular',
+                        textTransform: 'capitalize',
+                        transform: 'rotate(0deg)',
+                        userSelect: 'none',
+                    }}
+                >
+                    <code>My Work History</code>
+                </div>
+            </div>
+            <div style={{display: "none"}}>
+                {props.annotationLayer.children}
+                {props.textLayer.children}
+            </div>
+        </>
+    );
 
-  const onDocumentLoadSuccess = ({numPages}: {numPages: number}): void => {
-    setNumPages(numPages)
-  }
-  return (
-    <>
-      <Spacer $size="6rem" />
-      <Heading1><span style={{color: "rgb(var(--primary))"}}>/</span>Resume</Heading1>
-      <Spacer $size="0.5rem" />
-      <p>My work history</p>
-      <Spacer $size="6rem" />
-
-      <Document
-        onLoadSuccess={onDocumentLoadSuccess}
-        className="pdf-page"
-        file="documents/cv.pdf"
-        loading="Loading..."
-        scale={1.5}
-      >
-        <Page
-          renderAnnotationLayer={false}
-          renderTextLayer={false}
-          pageNumber={pageNumber}
-        />
-      </Document>
-
-      <div style={{display: "flex", alignItems: "center", gap: "2rem", justifyContent: "center", margin: "2rem 0"}}>
-        <button className='button'
-          onClick={() => {setPageNumber(number => number - 1)}}
-          disabled={pageNumber <= 1}> Prev Page </button>
-        <span> {pageNumber} </span>
-        <button
-          className='button'
-          onClick={() => setPageNumber(number => number + 1)}
-          disabled={pageNumber >= numPages}> Next Page </button>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <Spacer $size="6rem" />
+            <Heading1><span style={{color: "rgb(var(--primary))"}}>/</span>Resume</Heading1>
+            <Spacer $size="0.5rem" />
+            <p>My work history</p>
+            <Spacer $size="6rem" />
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                <Viewer
+                    renderLoader={(percentages: number) => (
+                        <div style={{width: '240px'}}>
+                            <ProgressBar progress={Math.round(percentages)} />
+                        </div>
+                    )}
+                    transformGetDocumentParams={(options: PdfJs.GetDocumentParams) =>
+                        Object.assign({}, options, {
+                            disableRange: true,
+                            disableStream: true,
+                        })
+                    }
+                    renderPage={renderPage}
+                    fileUrl="documents/cv.pdf"
+                />
+            </Worker>
+        </>
+    )
 }
 
 export default Resume;
