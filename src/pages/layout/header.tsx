@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Link} from "react-router";
+import {Link, useLocation} from "react-router";
 import styled from 'styled-components'
 
 const NavigationSection = styled.section`
@@ -45,6 +45,10 @@ const ListItem = styled.li`
     &:hover {
       color: rgb(var(--white));
     }
+  }
+
+  &.active {
+      color: rgb(var(--white));
   }
 `;
 
@@ -109,6 +113,34 @@ const HamburgerSwitch = styled.input`
 
 const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const {pathname: currentPathname} = useLocation();
+
+  const menuLinks = [
+    {
+      name: "home",
+      path: "/",
+    },
+    {
+      name: "blogs",
+      path: "/blogs"
+    },
+    {
+      name: "resume",
+      path: "/resume"
+    },
+    {
+      name: "projects",
+      path: "/projects"
+    },
+    {
+      name: "bookmarks",
+      path: "/bookmarks"
+    },
+    {
+      name: "contact",
+      path: "/contact"
+    }
+  ];
 
   const handleChange = (event: React.InputHTMLAttributes<InputEvent>) => {
     setShowMobileMenu(!event.checked);
@@ -128,36 +160,15 @@ const Header: React.FC = () => {
     </Hamburger>
     <NavigationLinks>
       <ListItems>
-        <ListItem>
-          <Link to="/" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>home
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/blogs" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>blogs
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/resume" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>resume
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/projects" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>projects
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/bookmarks" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>bookmarks
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/contact" onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <span style={{color: "rgb(var(--primary))"}}>#</span>contact
-          </Link>
-        </ListItem>
+        {
+          menuLinks.map(({path, name}) =>
+            <ListItem className={path === currentPathname ? "active" : ""}>
+              <Link to={path} onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <span style={{color: "rgb(var(--primary))"}}>#</span>{name}
+              </Link>
+            </ListItem>
+          )
+        }
       </ListItems>
     </NavigationLinks>
   </NavigationSection>
