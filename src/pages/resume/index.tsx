@@ -1,7 +1,6 @@
 import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
 import { Heading1, Spacer } from '../home';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -11,10 +10,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 const Resume = () => {
     const [numPages, setNumPages] = useState<number>();
     const [pageNumber, setPageNumber] = useState<number>(1);
-    const [inputPageNumber, setInputPageNumber] = useState(1);
 
-    function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-        setNumPages(numPages);
+    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }): void => {
+        setNumPages(numPages)
     }
     return (
         <>
@@ -32,7 +30,7 @@ const Resume = () => {
                 scale={1.5}
             >
                 <Page
-                    renderAnnotationLayer={true}
+                    renderAnnotationLayer={false}
                     renderTextLayer={false}
                     pageNumber={pageNumber}
                 />
@@ -41,21 +39,14 @@ const Resume = () => {
             <div style={{ display: "flex", alignItems: "center", gap: "2rem", justifyContent: "center", margin: "2rem 0" }}>
                 <button className='button' onClick={() => {
                     setPageNumber(number => number - 1);
-                    setInputPageNumber(number => number - 1);
                 }
                 } disabled={pageNumber <= 1}> Prev Page </button>
-                <input
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setInputPageNumber(+event.currentTarget.value)}
-                    onBlur={() => setPageNumber(inputPageNumber)}
-                    value={inputPageNumber}
-                    style={{ width: "2ch", font: "inherit" }}
-                />
+                {pageNumber}
                 {numPages &&
-                    <button className='button' onClick={() => {
-                        setPageNumber(number => number + 1);
-                        setInputPageNumber(number => number + 1);
-                    }
-                    } disabled={pageNumber >= numPages}> Next Page </button>
+                    <button
+                        className='button'
+                        onClick={() => setPageNumber(number => number + 1)}
+                        disabled={pageNumber >= numPages}> Next Page </button>
                 }
             </div>
         </>

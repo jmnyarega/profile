@@ -1,7 +1,6 @@
 import { Link } from 'react-router';
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components'
-
 import Project from '../../components/project';
 import { ProjectsGridSection, ProjectType } from '../projects';
 import { LinkTag } from '../contact';

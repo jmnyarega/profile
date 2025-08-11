@@ -75,6 +75,7 @@ img {
 
 .pdf-page {
   width: max-content;
+  overflow: auto;
   margin: 0 auto;
   min-height: 60rem;
 }
