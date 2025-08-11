@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+import {useState} from "react";
+import {Link} from "react-router";
 import styled from 'styled-components'
 
 const NavigationSection = styled.section`
@@ -74,59 +75,93 @@ const HamburgerSwitch = styled.input`
   z-index: -1;
   opacity: 0;
 
-  &:checked ~ nav {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 4.375rem;
-    z-index: 100;
-    background-color: rgb(var(--dark));
+  @media(max-width: 60rem) {
+    &:checked ~ nav {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 4.375rem;
+      z-index: 100;
+      background-color: rgb(var(--dark));
 
-    ul {
-      display: flex;
-      flex-direction: column;
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      display: block;
     }
 
-    display: block;
-  }
+    &:checked ~ label .top {
+      transform: translateY(0.7rem) rotateZ(30deg);
+    }
 
-  &:checked ~ label .top {
-    transform: translateY(0.7rem) rotateZ(30deg);
-  }
+    &:checked ~ label .bottom {
+      transform: translateY(-0.7rem) rotateZ(-30deg);
+    }
 
-  &:checked ~ label .bottom {
-    transform: translateY(-0.7rem) rotateZ(-30deg);
-  }
-
-  &:checked ~ label .middle {
-    width: 0;
+    &:checked ~ label .middle {
+      width: 0;
+    }
   }
 `
 
-const Header: React.FC = () => <NavigationSection>
-  <ImageSection>
-    <Link to='/'>
-      <img src="icons/logo.svg" alt="Josiah Mokobo Nyarega" />Josiah
-    </Link>
-  </ImageSection>
-  <HamburgerSwitch type="checkbox" id='navigation' />
-  <Hamburger htmlFor='navigation'>
-    <span className="top"></span>
-    <span className="middle"></span>
-    <span className="bottom"></span>
-  </Hamburger>
-  <NavigationLinks>
-    <ListItems>
-      <ListItem> <Link to="/"><span style={{ color: "rgb(var(--primary))" }}>#</span>home</Link> </ListItem>
-      <ListItem> <Link to="/blogs"><span style={{ color: "rgb(var(--primary))" }}>#</span>blogs</Link> </ListItem>
-      <ListItem> <Link to="/resume"><span style={{ color: "rgb(var(--primary))" }}>#</span>resume</Link> </ListItem>
-      <ListItem> <Link to="/projects"><span style={{ color: "rgb(var(--primary))" }}>#</span>projects</Link> </ListItem>
-      <ListItem> <Link to="/bookmarks"><span style={{ color: "rgb(var(--primary))" }}>#</span>bookmarks</Link> </ListItem>
-      <ListItem> <Link to="/contact"><span style={{ color: "rgb(var(--primary))" }}>#</span>contact</Link> </ListItem>
-    </ListItems>
-  </NavigationLinks>
-</NavigationSection>
+const Header: React.FC = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleChange = (event: React.InputHTMLAttributes<InputEvent>) => {
+    setShowMobileMenu(!event.checked);
+  }
+
+  return <NavigationSection>
+    <ImageSection>
+      <Link to='/'>
+        <img src="icons/logo.svg" alt="Josiah Mokobo Nyarega" />Josiah
+      </Link>
+    </ImageSection>
+    <HamburgerSwitch type="checkbox" onChange={handleChange} checked={showMobileMenu} />
+    <Hamburger onClick={() => setShowMobileMenu(!showMobileMenu)}>
+      <span className="top"></span>
+      <span className="middle"></span>
+      <span className="bottom"></span>
+    </Hamburger>
+    <NavigationLinks>
+      <ListItems>
+        <ListItem>
+          <Link to="/" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>home
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/blogs" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>blogs
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/resume" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>resume
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/projects" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>projects
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/bookmarks" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>bookmarks
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/contact" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <span style={{color: "rgb(var(--primary))"}}>#</span>contact
+          </Link>
+        </ListItem>
+      </ListItems>
+    </NavigationLinks>
+  </NavigationSection>
+}
 
 
 export default Header;
