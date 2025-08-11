@@ -1,85 +1,85 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --default-font: "Fira Code", monospace;
-  --primary: 199, 120, 221;
-  --white: 255, 255, 255;
-  --gray: 171, 178, 191;
-  --dark: 40, 44, 51;
-  --red: 224, 107, 116;
-  --green: 152, 195 121;
-  --yellow: 229, 192, 122;
-  --blue: 98, 174, 239;
-  --pink: 199, 120, 221;
-  --teal: 85, 182, 194;
-  --gray: 171, 178, 191;
+    --default-font: "Fira Code", monospace;
+    --primary: 199, 120, 221;
+    --white: 255, 255, 255;
+    --gray: 171, 178, 191;
+    --dark: 40, 44, 51;
+    --red: 224, 107, 116;
+    --green: 152, 195 121;
+    --yellow: 229, 192, 122;
+    --blue: 98, 174, 239;
+    --pink: 199, 120, 221;
+    --teal: 85, 182, 194;
+    --gray: 171, 178, 191;
 }
 
 body {
-  font-family: var(--default-font);
-  font-size: 1rem;
-  background-color: rgb(var(--dark));
+    font-family: var(--default-font);
+    font-size: 1rem;
+    background-color: rgb(var(--dark));
 
-  max-width: 90rem;
-  width: 90%;
-  margin: 0 auto;
+    max-width: 90rem;
+    width: 90%;
+    margin: 0 auto;
 
-  color: rgb(var(--gray));
+    color: rgb(var(--gray));
 }
 
 img {
-  max-width: 100%;
-  object-fit: cover;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .button {
-  font: inherit;
-  appearance: none;
-  outline: none;
-  padding: 1em;
-  margin: 0;
-  text-decoration: none !important;
-  line-height: 120%;
+    font: inherit;
+    appearance: none;
+    outline: none;
+    padding: 1em;
+    margin: 0;
+    text-decoration: none !important;
+    line-height: 120%;
 
-  background-color: rgb(var(--background));
-  color: rgb(var(--white)) !important;
-  cursor: pointer;
-  font-weight: 500;
+    background-color: rgb(var(--background));
+    color: rgb(var(--white)) !important;
+    cursor: pointer;
+    font-weight: 500;
 
-  transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
 }
 
 .button--primary {
-  border: 1px solid rgba(var(--primary), 1);
+    border: 1px solid rgba(var(--primary), 1);
 }
 
 
 .button--primary:hover {
-  background-color: rgba(var(--primary), 0.5);
+    background-color: rgba(var(--primary), 0.5);
 }
 
 .button--gray {
-  border: 1px solid rgb(var(--gray));
-  color: rgb(var(--gray-color));
+    border: 1px solid rgb(var(--gray));
+    color: rgb(var(--gray-color));
 }
 
 
 .button--gray:hover {
-  background-color: rgba(var(--gray), 0.4);
+    background-color: rgba(var(--gray), 0.4);
 }
 
 .pdf-page {
-  width: max-content;
-  overflow: auto;
-  margin: 0 auto;
-  min-height: 60rem;
+    width: max-content;
+    overflow: auto;
+    margin: 0 auto;
+    min-height: 60rem;
 }
 
 .pdf-page>div:not(:last-child) {
-  border-bottom: 0.5rem solid rgb(var(--dark));
+    border-bottom: 0.5rem solid rgb(var(--dark));
 }

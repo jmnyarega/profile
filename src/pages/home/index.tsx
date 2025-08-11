@@ -1,15 +1,15 @@
-import { Link } from 'react-router';
-import { useCallback, useEffect, useState } from 'react';
+import {Link} from 'react-router';
+import {useCallback, useEffect, useState} from 'react';
 import styled from 'styled-components'
 import Project from '../../components/project';
-import { ProjectsGridSection, ProjectType } from '../projects';
-import { LinkTag } from '../contact';
+import {ProjectsGridSection, ProjectType} from '../projects';
+import {LinkTag} from '../contact';
 
 type SkillSet = {
-  [key: string]: string[]
+    [key: string]: string[]
 }
 
-export const Spacer = styled.div<{ $size?: string }>`
+export const Spacer = styled.div<{$size?: string}>`
   ${props => `
       margin: ${props.$size || "3rem"} 0;
   `};
@@ -117,83 +117,83 @@ const ImageSection = styled.div`
   gap: 3rem;
 `;
 
-const Hero = ({ cv }: { cv: string }) => (
-  <HeroSection>
-    <IntroSection>
-      <Heading1>Josiah is a
-        <AccentHeading1> web designer </AccentHeading1> and <AccentHeading1> front-end developer</AccentHeading1>
-      </Heading1>
-      <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <Link to='/contact' className="button button--primary">Contact me!!</Link>
-        <LinkTag href={cv} target='_blank' className="button button--gray">Download CV</LinkTag>
-      </div>
-    </IntroSection>
-    <ImageSection>
-      <img src="images/profile-photo.png" alt="Josiah Mokobo Nyarega" />
-      <RandomQuote>
-        <span> With great power comes great electricity bill </span>
-      </RandomQuote>
-    </ImageSection>
-  </HeroSection>
+const Hero = ({cv}: {cv: string}) => (
+    <HeroSection>
+        <IntroSection>
+            <Heading1>Josiah is a
+                <AccentHeading1> web designer </AccentHeading1> and <AccentHeading1> front-end developer</AccentHeading1>
+            </Heading1>
+            <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
+            <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
+                <Link to='/contact' className="button button--primary">Contact me!!</Link>
+                <LinkTag href={cv} target='_blank' className="button button--gray">Download CV</LinkTag>
+            </div>
+        </IntroSection>
+        <ImageSection>
+            <img src="images/profile-photo.png" alt="Josiah Mokobo Nyarega" />
+            <RandomQuote>
+                <span> With great power comes great electricity bill </span>
+            </RandomQuote>
+        </ImageSection>
+    </HeroSection>
 )
 
-const AboutMe = ({ myInfo }: { myInfo: string[] }) => <section>
-  <Spacer />
-  <Heading2Underline># Who is Josiah? </Heading2Underline>
-  <Spacer $size='2rem' />
-  <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-    {myInfo.map(info => <p style={{ lineHeight: "180%", color: "rgb(var(--white))" }}> {info} </p>)}
-  </div>
+const AboutMe = ({myInfo}: {myInfo: string[]}) => <section>
+    <Spacer />
+    <Heading2Underline># Who is Josiah? </Heading2Underline>
+    <Spacer $size='2rem' />
+    <div style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
+        {myInfo.map(info => <p style={{lineHeight: "180%", color: "rgb(var(--white))"}}> {info} </p>)}
+    </div>
 </section>
 
-const Skills: React.FC<{ skills: SkillSet }> = ({ skills }) =>
-  <section>
-    <Spacer $size='2rem' />
-    <Heading2Underline># My Skills</Heading2Underline>
-    <Spacer />
-    <ul style={{ lineHeight: "180%", color: "rgb(var(--white))", listStyleType: "' -> '", listStylePosition: "inside" }}>
-      {Object.keys(skills).map((skill) =>
-        <li key={skill}>
-          <b style={{ textTransform: "capitalize" }}>{skill} </b>
-          {"<>"} {skills[skill].join(", ")}
-        </li>
-      )}
-    </ul>
-  </section>
+const Skills: React.FC<{skills: SkillSet}> = ({skills}) =>
+    <section>
+        <Spacer $size='2rem' />
+        <Heading2Underline># My Skills</Heading2Underline>
+        <Spacer />
+        <ul style={{lineHeight: "180%", color: "rgb(var(--white))", listStyleType: "' -> '", listStylePosition: "inside"}}>
+            {Object.keys(skills).map((skill) =>
+                <li key={skill}>
+                    <b style={{textTransform: "capitalize"}}>{skill} </b>
+                    {"<>"} {skills[skill].join(", ")}
+                </li>
+            )}
+        </ul>
+    </section>
 
 const Home = () => {
-  const [projects, setProjects] = useState<ProjectType[]>([]);
-  const [skills, setSkills] = useState<SkillSet>({});
-  const [info, setInfo] = useState<string[]>([]);
-  const [cvDownloadLink, setCvDownloadLink] = useState("");
+    const [projects, setProjects] = useState<ProjectType[]>([]);
+    const [skills, setSkills] = useState<SkillSet>({});
+    const [info, setInfo] = useState<string[]>([]);
+    const [cvDownloadLink, setCvDownloadLink] = useState("");
 
-  const getData = useCallback(async () => {
-    const { projects, skills, info, cv_download_link } = (await import("../../data.json")).default;
-    setProjects(projects["complete applications"]);
-    setSkills(skills);
-    setInfo(info);
-    setCvDownloadLink(cv_download_link);
-  }, []);
-  useEffect(() => { getData() }, [getData]);
-  return (
-    <>
-      <Hero cv={cvDownloadLink} />
-      <section>
-        <Heading2Underline># Projects</Heading2Underline>
-        <Spacer $size="2rem" />
-        <ProjectsGridSection>
-          {projects.map(project => <Project {...project} />)}
-        </ProjectsGridSection>
-        <Spacer $size="2rem" />
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Link to='/projects' className="button button--primary">More Projects</Link>
-        </div>
-      </section>
-      <AboutMe myInfo={info} />
-      <Skills skills={skills} />
-    </>
-  )
+    const getData = useCallback(async () => {
+        const {projects, skills, info, cv_download_link} = (await import("../../data.json")).default;
+        setProjects(projects["complete applications"]);
+        setSkills(skills);
+        setInfo(info);
+        setCvDownloadLink(cv_download_link);
+    }, []);
+    useEffect(() => {getData()}, [getData]);
+    return (
+        <>
+            <Hero cv={cvDownloadLink} />
+            <section>
+                <Heading2Underline># Projects</Heading2Underline>
+                <Spacer $size="2rem" />
+                <ProjectsGridSection>
+                    {projects.map(project => <Project {...project} />)}
+                </ProjectsGridSection>
+                <Spacer $size="2rem" />
+                <div style={{display: "flex", justifyContent: "center"}}>
+                    <Link to='/projects' className="button button--primary">More Projects</Link>
+                </div>
+            </section>
+            <AboutMe myInfo={info} />
+            <Skills skills={skills} />
+        </>
+    )
 }
 
 export default Home;

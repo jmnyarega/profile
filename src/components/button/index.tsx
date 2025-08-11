@@ -1,13 +1,10 @@
 import React from "react";
 
 export interface Props extends React.ComponentPropsWithoutRef<"button"> {
-  specialProp?: string;
+    specialProp?: string;
 }
 
-const Button: React.FC<Props> = (props) => (
-  <button {...props}>
-    {props.children}
-  </button>
-);
+const Button: React.FC<Props> = (props) =>
+    <button {...props}> {props.children} </button>
 
 export default Button;

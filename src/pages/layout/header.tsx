@@ -142,9 +142,7 @@ const Header: React.FC = () => {
     }
   ];
 
-  const handleChange = (event: React.InputHTMLAttributes<InputEvent>) => {
-    setShowMobileMenu(!event.checked);
-  }
+  const handleChange = (event: React.InputHTMLAttributes<InputEvent>) => setShowMobileMenu(!event.checked);
 
   return <NavigationSection>
     <ImageSection>
