@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Link, useLocation} from "react-router";
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const NavigationSection = styled.section`
   display: flex;

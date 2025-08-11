@@ -1,9 +1,8 @@
-import {Link} from 'react-router';
 import {useCallback, useEffect, useState} from 'react';
-import styled from 'styled-components'
+import {Link} from 'react-router';
+import styled from 'styled-components';
 import Project from '../../components/project';
 import {ProjectsGridSection, ProjectType} from '../projects';
-import {LinkTag} from '../contact';
 
 type SkillSet = {
     [key: string]: string[]
@@ -117,7 +116,7 @@ const ImageSection = styled.div`
   gap: 3rem;
 `;
 
-const Hero = ({cv}: {cv: string}) => (
+const Hero = () => (
     <HeroSection>
         <IntroSection>
             <Heading1>Josiah is a
@@ -126,7 +125,7 @@ const Hero = ({cv}: {cv: string}) => (
             <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
             <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
                 <Link to='/contact' className="button button--primary">Contact me!!</Link>
-                <LinkTag href={cv} target='_blank' className="button button--gray">Download CV</LinkTag>
+                <Link to="/resume" className="button button--gray"> Read my resume </Link>
             </div>
         </IntroSection>
         <ImageSection>
@@ -166,25 +165,21 @@ const Home = () => {
     const [projects, setProjects] = useState<ProjectType[]>([]);
     const [skills, setSkills] = useState<SkillSet>({});
     const [info, setInfo] = useState<string[]>([]);
-    const [cvDownloadLink, setCvDownloadLink] = useState("");
 
     const getData = useCallback(async () => {
-        const {projects, skills, info, cv_download_link} = (await import("../../data.json")).default;
+        const {projects, skills, info} = (await import("../../data.json")).default;
         setProjects(projects["complete applications"]);
         setSkills(skills);
         setInfo(info);
-        setCvDownloadLink(cv_download_link);
     }, []);
     useEffect(() => {getData()}, [getData]);
     return (
         <>
-            <Hero cv={cvDownloadLink} />
+            <Hero />
             <section>
                 <Heading2Underline># Projects</Heading2Underline>
                 <Spacer $size="2rem" />
-                <ProjectsGridSection>
-                    {projects.map(project => <Project {...project} />)}
-                </ProjectsGridSection>
+                <ProjectsGridSection> {projects.map(project => <Project {...project} />)} </ProjectsGridSection>
                 <Spacer $size="2rem" />
                 <div style={{display: "flex", justifyContent: "center"}}>
                     <Link to='/projects' className="button button--primary">More Projects</Link>

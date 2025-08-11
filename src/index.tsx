@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from 'react-router';
-import Layout from './pages/layout';
 import './index.css';
 import Blogs from './pages/blogs';
 import Bookmarks from './pages/bookmarks';
 import Contact from './pages/contact';
 import Home from './pages/home';
+import Layout from './pages/layout';
 import Projects from './pages/projects';
-import reportWebVitals from './reportWebVitals';
 import Resume from './pages/resume';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

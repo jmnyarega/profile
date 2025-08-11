@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const FooterSection = styled.section`
   border-top: 1px solid rgb(var(--gray));

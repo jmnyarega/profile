@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
+import styled from "styled-components";
 import Project from "../../components/project";
 import {Heading2, Spacer} from "../home";
-import styled from "styled-components";
 
 export type ProjectType = {
   name: string;

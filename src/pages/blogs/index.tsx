@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import {Heading1, Heading2, Spacer} from "../home";
-import {Heading3, LinkTag} from "../contact";
 import {useEffect, useState} from "react";
+import styled from "styled-components";
 import {TagSection} from "../../components/project";
+import {Heading3, LinkTag} from "../contact";
+import {Heading1, Heading2, Spacer} from "../home";
 
 type Blog = {
     title: string;

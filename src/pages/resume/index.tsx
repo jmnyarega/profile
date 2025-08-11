@@ -1,6 +1,6 @@
+import {useState} from 'react';
 import {Document, Page, pdfjs} from 'react-pdf';
 import {Heading1, Spacer} from '../home';
-import {useState} from 'react';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
