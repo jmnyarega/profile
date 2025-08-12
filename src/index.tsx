@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Route, Routes} from 'react-router';
+import {HashRouter, Route, Routes} from 'react-router';
 import './index.css';
 import Blogs from './pages/blogs';
 import Bookmarks from './pages/bookmarks';
@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="/blogs" element={<Blogs />} />
@@ -28,7 +28,7 @@ root.render(
                     <Route index element={<Home />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>
 );
 
