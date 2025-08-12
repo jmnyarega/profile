@@ -72,14 +72,3 @@ img {
 .button--gray:hover {
     background-color: rgba(var(--gray), 0.4);
 }
-
-.pdf-page {
-    width: max-content;
-    overflow: auto;
-    margin: 0 auto;
-    min-height: 60rem;
-}
-
-.pdf-page>div:not(:last-child) {
-    border-bottom: 0.5rem solid rgb(var(--dark));
-}
