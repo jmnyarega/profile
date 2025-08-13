@@ -161,6 +161,18 @@
                     "javascript",
                     "NodeJs"
                 ]
+            },
+            {
+                "name": "Kentekencheck Search",
+                "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
+                "code": "",
+                "liveUrl": "https://www.kentekencheck.nu/zoek",
+                "thumbnail": "images/kentekencheck-logo-1.png",
+                "tags": [
+                    "Laravel",
+                    "Typescript",
+                    "Elastic Search"
+                ]
             }
         ],
         "small projects": [
@@ -186,18 +198,6 @@
                     "ReactJs",
                     "Typescript",
                     "Laravel"
-                ]
-            },
-            {
-                "name": "Kentekencheck Search",
-                "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
-                "code": "",
-                "liveUrl": "https://www.kentekencheck.nu/zoek",
-                "thumbnail": "images/kentekencheck-logo-1.png",
-                "tags": [
-                    "Laravel",
-                    "Typescript",
-                    "Elastic Search"
                 ]
             }
         ],
