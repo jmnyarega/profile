@@ -178,7 +178,7 @@
         "small projects": [
             {
                 "name": "Our Giving Board",
-                "description": "The platform enables users to contribute funds in an help each other in turns",
+                "description": "The platform enables users to contribute funds to help each other in turns",
                 "liveUrl": "",
                 "code": "https://github.com/jmnyarega/ourgivingboard-web",
                 "thumbnail": "images/gifting-project.jpeg",
