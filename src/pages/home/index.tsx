@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {FC, useCallback, useEffect, useState} from 'react';
 import {Link} from 'react-router';
 import styled from 'styled-components';
 import Project from '../../components/project';
@@ -20,6 +20,7 @@ const HeroSection = styled.section`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 `;
 
 export const Heading1 = styled.h1`
@@ -77,7 +78,7 @@ const AccentHeading1 = styled.span`
 
 const IntroParagraph = styled.p`
   font-size: 1rem;
-  line-height: 180%;
+  line-height: 200%;
   font-weight: 400;
 `;
 
@@ -116,13 +117,15 @@ const ImageSection = styled.div`
   gap: 3rem;
 `;
 
-const Hero = () => (
-    <HeroSection>
+const Hero: FC<{intro: string; quote: string[]}> = ({intro, quote}) => {
+    const [theQuote, from] = quote;
+
+    return <HeroSection>
         <IntroSection>
             <Heading1>Josiah is a
                 <AccentHeading1> web designer </AccentHeading1> and <AccentHeading1> front-end developer</AccentHeading1>
             </Heading1>
-            <IntroParagraph>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</IntroParagraph>
+            <IntroParagraph>{intro}</IntroParagraph>
             <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
                 <Link to='/contact' className="button button--primary">Contact me!!</Link>
                 <Link to="/resume" className="button button--gray"> Read my resume </Link>
@@ -131,18 +134,18 @@ const Hero = () => (
         <ImageSection>
             <img src="images/profile-photo.png" alt="Josiah Mokobo Nyarega" />
             <RandomQuote>
-                <span> With great power comes great electricity bill </span>
+                <span>{theQuote}, {from}</span>
             </RandomQuote>
         </ImageSection>
     </HeroSection>
-)
+}
 
 const AboutMe = ({myInfo}: {myInfo: string[]}) => <section>
     <Spacer />
     <Heading2Underline># Who is Josiah? </Heading2Underline>
     <Spacer $size='2rem' />
     <div style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
-        {myInfo.map(info => <p style={{lineHeight: "180%", color: "rgb(var(--white))"}}> {info} </p>)}
+        {myInfo.map(info => <p key={info} style={{lineHeight: "180%", color: "rgb(var(--white))"}}> {info} </p>)}
     </div>
 </section>
 
@@ -154,8 +157,7 @@ const Skills: React.FC<{skills: SkillSet}> = ({skills}) =>
         <ul style={{lineHeight: "180%", color: "rgb(var(--white))", listStyleType: "' -> '", listStylePosition: "inside"}}>
             {Object.keys(skills).map((skill) =>
                 <li key={skill}>
-                    <b style={{textTransform: "capitalize"}}>{skill} </b>
-                    {"<>"} {skills[skill].join(", ")}
+                    <b style={{textTransform: "capitalize"}}>{skill} </b> {"<>"} {skills[skill].join(", ")}
                 </li>
             )}
         </ul>
@@ -164,22 +166,27 @@ const Skills: React.FC<{skills: SkillSet}> = ({skills}) =>
 const Home = () => {
     const [projects, setProjects] = useState<ProjectType[]>([]);
     const [skills, setSkills] = useState<SkillSet>({});
+    const [quote, setQuote] = useState<string[]>([]);
+    const [intro, setIntro] = useState("");
     const [info, setInfo] = useState<string[]>([]);
 
     const getData = useCallback(async () => {
-        const {projects, skills, info} = (await import("../../data.json")).default;
+        const {projects, skills, info, intro, quotes} = (await import("../../data.json")).default;
+        const randomQuote = quotes.quotes[Math.floor(1 + Math.random() * quotes.quotes.length) - 1];
         setProjects(projects["complete applications"]);
         setSkills(skills);
         setInfo(info);
+        setIntro(intro);
+        setQuote(randomQuote);
     }, []);
     useEffect(() => {getData()}, [getData]);
     return (
         <>
-            <Hero />
+            <Hero intro={intro} quote={quote} />
             <section>
                 <Heading2Underline># Projects</Heading2Underline>
                 <Spacer $size="2rem" />
-                <ProjectsGridSection> {projects.map(project => <Project {...project} />)} </ProjectsGridSection>
+                <ProjectsGridSection> {projects.map(project => <Project key={project.name} {...project} />)} </ProjectsGridSection>
                 <Spacer $size="2rem" />
                 <div style={{display: "flex", justifyContent: "center"}}>
                     <Link to='/projects' className="button button--primary">More Projects</Link>

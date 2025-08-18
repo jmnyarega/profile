@@ -1,4 +1,5 @@
 {
+    "intro": "I am a results-driven Full-Stack Engineer with a proven track record of building robust, secure, and user-friendly web applications. I leverage JavaScript, PHP, and Node.js to deliver efficient and scalable solutions. My experience extends across the entire web development lifecycle, coupled with strong communication, collaboration, and problem-solving skills. I am adept at optimizing performance, improving user experience, and driving operational efficiency.",
     "cv_download_link": "https://github.com/jmnyarega/public-documents/raw/f9bd6340705dd3cb486e92c1274657a5340ff148/JOSIAH-MOKOBO-NYAREGA.pdf",
     "info": [
         "I am a passionate and accomplished Software Developer, adept in the art and science of crafting sophisticated web applications. My expertise spans PHP, JavaScript, NodeJs, Blazor, and Next.js—technologies with which I weave seamless, elegant solutions that are both robust and intuitive.",
@@ -202,5 +203,31 @@
             }
         ],
         "open source contributions/following": []
+    },
+    "quotes": {
+        "quotes": [
+            [
+                "With great power comes great electricity bill",
+                "A"
+            ],
+            [
+                "With great power comes great electricity",
+                "DSD"
+            ],
+            [
+                "With great power comes great  bill",
+                "JKJKJK"
+            ]
+        ],
+        "bookmarks": [
+            [
+                "One misconception many people have is that we need to listen to reply, whereas in reality, we need to listen to understand",
+                "14 Habits of Highly Productive Developers"
+            ],
+            [
+                "Accept the fact that newer is not always better",
+                "14 Habits of Highly Productive Developers"
+            ]
+        ]
     }
 }
