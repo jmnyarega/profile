@@ -44,6 +44,11 @@ const Resume = () => {
             <Spacer $size="0.5rem" />
             <p>My work history</p>
             <Spacer $size="6rem" />
+            <div style={{display: "flex", justifyContent: "flex-end"}}>
+                <a target='_blank' href="documents/cv.pdf" className='button button--primary'>Download CV</a>
+            </div>
+            <Spacer $size="3rem" />
+
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                 <Viewer
                     renderLoader={(percentages: number) => (

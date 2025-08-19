@@ -72,3 +72,8 @@ img {
 .button--gray:hover {
     background-color: rgba(var(--gray), 0.4);
 }
+
+.rpv-core__inner-page {
+    display: flex;
+    justify-content: center;
+}
