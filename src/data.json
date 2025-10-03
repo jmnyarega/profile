@@ -205,26 +205,73 @@
     "quotes": {
         "quotes": [
             [
-                "With great power comes great electricity bill",
-                "A"
+                "To me programming is more than an important practical art. It is also a gigantic undertaking in the frustrations of knowledge",
+                "Grace Hopper"
             ],
             [
-                "With great power comes great electricity",
-                "DSD"
+                "Do not stop thinking of life as an adventure. You have no security unless you can live bravely, excitingly, imaginatively; unless you can choose a challege instead of competence ",
+                "Eleanor Roosevelt"
             ],
             [
-                "With great power comes great  bill",
-                "JKJKJK"
+                "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow and exclude people. So create",
+                "Why The Lucy Stiff"
+            ],
+            [
+                "Be curious, read widely. Try new things. I think a lot of what people call intelligence boils down to curiosity",
+                "Aaron Swartz, Programmer and internet hacktivist"
+            ],
+            [
+                "The number one skill required for learning any complex system is patience",
+                "Kelsey Hightower, Kubernetes The Hard Way"
+            ],
+            [
+                "Documentation is a love letter that you write to your future self",
+                "Damian Conway, computer scientist"
+            ],
+            [
+                "When we show up, act boldly, and practice the best ways to be wrong, we fail forward. No matter where we end up, we've grown from where we begam",
+                "Stacey Abram, Activist and founder of Fair Fight Action"
             ]
         ],
         "bookmarks": [
             [
-                "One misconception many people have is that we need to listen to reply, whereas in reality, we need to listen to understand",
+                [
+                    "One misconception many people have is that we need to listen to reply, whereas in reality, we need to listen to understand",
+                    "Accept the fact that newer is not always better"
+                ],
                 "14 Habits of Highly Productive Developers"
             ],
             [
-                "Accept the fact that newer is not always better",
-                "14 Habits of Highly Productive Developers"
+                [
+                    "The successful contributors don't just have the right skills and mindset: they build a contribution practice",
+                    "Working on open source will challengr your technical abilities and force you to grow as a developer. In additional, you'll get  a crash in working in async systems, communication and consensus building, and distributed teams",
+                    "Self-actualizations means the ability to turn a thought or concept in my head into something that exists in the world",
+                    "How does a developer get context and build a history with a project? They do it by helping, interacting, filling bugs, engaging with issues, and reading pull requests discussions. They do it by sticking around and paying attention",
+                    "At the end of the day, a maintainer is someone who cared enough go contribute to a project actively",
+                    "The secret to successfully starting your open source career is knowing that unblocking yourself is part of the process",
+                    "Humnan beings are downright awful at guessing other people's abilities",
+                    "People don't know their capabilities",
+                    "When you take any action, you break out of the cycle of passiveness and into the moment",
+                    "Contributing to open source is an open game. An open game is a task where success has not been clearly defined",
+                    "People fear they'll be exposed as a fraud when everyone can see their work. They worry they'll make mistakes, and their worst fears will be confirmed",
+                    "It takes confidence to contribute to open source",
+                    "I want to engage your critical thinking. Begin to see problems with libraries as potholes to be filled instead of obstacles to be avoided",
+                    "Successfull contributors take notes while they work. When they hit something painful, they jot it down. Later, when they have time, they comb through those notes to see what could be better",
+                    "Maintainers will prioritize changes that help the most common cases or prevent the most catastrophic ones",
+                    "If you find a maintainer can't or won't accept your code consider making it into a library instead",
+                    "If you keep a growth mindset and keep working, you'll be unstoppable",
+                    "The beating heart of all established open source projects lives in the issues. From bug reports to feature requests to expressing gratitude to Maintainers - the issues are where communication happens and work gets done",
+                    "The ability to share collective knowledge is a superpower, and lives in the documentation",
+                    "Before you can find the opportunities and implement ideas, you'll have to gather some context and identify problems",
+                    "Code is always a liability, Always",
+                    "A refactor is when you change the code's structure, but you don't change the behaviour",
+                    "For each change, make the change easy(warning: this may be hard), then make the easy change",
+                    "Issues and pull requests are the primary sources of communication between open source Maintainers and the people who use their software",
+                    "All feature requests are solving a problem. If that problem is unclear to you, it may be unclear to others. Ask questions or research the issue untill you could explain the core problem to someone else",
+                    "Clear communication isn't just a nice to have - it's pretty much a technical requirement",
+                    "Good documetation says 'why' not 'how'"
+                ],
+                ""
             ]
         ]
     }
