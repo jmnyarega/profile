@@ -174,9 +174,7 @@
                     "Typescript",
                     "Elastic Search"
                 ]
-            }
-        ],
-        "small projects": [
+            },
             {
                 "name": "Our Giving Board",
                 "description": "The platform enables users to contribute funds to help each other in turns",
