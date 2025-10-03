@@ -1,4 +1,4 @@
-import {ReactNode, useEffect, useState} from "react";
+import React, {ReactNode, useEffect, useState} from "react";
 import {Heading2, Spacer} from "../home";
 
 const QuoteItem: React.FC<{quote: string[]}> = (props) => {

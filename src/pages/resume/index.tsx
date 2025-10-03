@@ -1,10 +1,8 @@
-import {Viewer, RenderPageProps, ProgressBar, PdfJs} from '@react-pdf-viewer/core';
-import {Worker} from '@react-pdf-viewer/core';
+import {PdfJs, ProgressBar, RenderPageProps, Viewer, Worker} from '@react-pdf-viewer/core';
 import {Heading1, Spacer} from '../home';
 
 const Resume = () => {
-    const renderPage = (props: RenderPageProps) => (
-        <>
+    const renderPage = (props: RenderPageProps) => (<>
             {props.canvasLayer.children}
             <div
                 style={{
@@ -34,40 +32,32 @@ const Resume = () => {
                 {props.annotationLayer.children}
                 {props.textLayer.children}
             </div>
-        </>
-    );
+        </>);
 
-    return (
-        <>
-            <Spacer $size="6rem" />
+    return (<>
+            <Spacer $size="6rem"/>
             <Heading1><span style={{color: "rgb(var(--primary))"}}>/</span>Resume</Heading1>
-            <Spacer $size="0.5rem" />
+            <Spacer $size="0.5rem"/>
             <p>My work history</p>
-            <Spacer $size="6rem" />
+            <Spacer $size="6rem"/>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
                 <a target='_blank' href="documents/cv.pdf" className='button button--primary'>Download CV</a>
             </div>
-            <Spacer $size="3rem" />
+            <Spacer $size="3rem"/>
 
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                 <Viewer
-                    renderLoader={(percentages: number) => (
-                        <div style={{width: '240px'}}>
-                            <ProgressBar progress={Math.round(percentages)} />
-                        </div>
-                    )}
-                    transformGetDocumentParams={(options: PdfJs.GetDocumentParams) =>
-                        Object.assign({}, options, {
-                            disableRange: true,
-                            disableStream: true,
-                        })
-                    }
+                    renderLoader={(percentages: number) => (<div style={{width: '240px'}}>
+                            <ProgressBar progress={Math.round(percentages)}/>
+                        </div>)}
+                    transformGetDocumentParams={(options: PdfJs.GetDocumentParams) => Object.assign({}, options, {
+                        disableRange: true, disableStream: true,
+                    })}
                     renderPage={renderPage}
                     fileUrl="documents/cv.pdf"
                 />
             </Worker>
-        </>
-    )
+        </>)
 }
 
 export default Resume;

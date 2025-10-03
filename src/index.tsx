@@ -11,26 +11,22 @@ import Projects from './pages/projects';
 import Resume from './pages/resume';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root.render(
-    <React.StrictMode>
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route path="/blogs" element={<Blogs />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/bookmarks" element={<Bookmarks />} />
-                    <Route path="/resume" element={<Resume />} />
-                    <Route index element={<Home />} />
-                </Route>
-            </Routes>
-        </HashRouter>
-    </React.StrictMode>
-);
+root.render(<React.StrictMode>
+    <HashRouter>
+        <Routes>
+            <Route path="/" element={<Layout/>}>
+                <Route path="/blogs" element={<Blogs/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/projects" element={<Projects/>}/>
+                <Route path="/bookmarks" element={<Bookmarks/>}/>
+                <Route path="/resume" element={<Resume/>}/>
+                <Route index element={<Home/>}/>
+            </Route>
+        </Routes>
+    </HashRouter>
+</React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
