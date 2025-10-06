@@ -36,28 +36,28 @@ const Projects = () => {
     }, []);
 
     return (<div>
-            <Spacer $size="6rem"/>
-            <Heading2><span style={{color: "rgb(var(--primary))"}}>/</span>projects</Heading2>
+        <Spacer $size="6rem"/>
+        <Heading2><span style={{color: "rgb(var(--primary))"}}>/</span>projects</Heading2>
 
-            <Spacer $size="0.5rem"/>
-            <p>List of my projects</p>
-            <Spacer $size="3rem"/>
+        <Spacer $size="0.5rem"/>
+        <p>List of my projects</p>
+        <Spacer $size="3rem"/>
 
-            {Object.keys(projectGroups).map(projectGroupName => <div key={projectGroupName}>
-                <section>
-                    <Heading2 style={{textTransform: "capitalize"}}>
-                        <span style={{color: "rgb(var(--primary))"}}>#</span>
-                        {projectGroupName}
-                    </Heading2>
-                    <Spacer $size="2rem"/>
-                    <ProjectsGridSection>
-                        {projectGroups[projectGroupName].map(project => <Project key={project.name} {...project} />)}
-                    </ProjectsGridSection>
-                </section>
-                <Spacer $size="4rem"/>
-            </div>)}
+        {Object.keys(projectGroups).map(projectGroupName => <div key={projectGroupName}>
+            <section>
+                <Heading2 style={{textTransform: "capitalize"}}>
+                    <span style={{color: "rgb(var(--primary))"}}>#</span>
+                    {projectGroupName}
+                </Heading2>
+                <Spacer $size="2rem"/>
+                <ProjectsGridSection>
+                    {projectGroups[projectGroupName].map(project => <Project key={project.name} {...project} />)}
+                </ProjectsGridSection>
+            </section>
+            <Spacer $size="4rem"/>
+        </div>)}
 
-        </div>)
+    </div>)
 }
 
 export default Projects;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from "react";
 
 const FooterSection = styled.section`
     border-top: 1px solid rgb(var(--gray));
@@ -9,7 +10,7 @@ const FooterSection = styled.section`
 `;
 
 const Footer: React.FC = () => <FooterSection>
-    &copy; Josiah Mokobo Nyarega
+    {"&copy; Josiah Mokobo Nyarega"}
 </FooterSection>
 
 

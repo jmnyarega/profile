@@ -115,6 +115,9 @@ const ImageSection = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @media (min-width: 60rem) {
+        width: 48%;
+    }
 `;
 
 const Hero: FC<{ intro: string; quote: string[] }> = ({intro, quote}) => {
@@ -183,16 +186,16 @@ const Home = () => {
     }, [getData]);
     return (<>
         <Hero intro={intro} quote={quote}/>
-            <section>
-                <Heading2Underline># Projects</Heading2Underline>
-                <Spacer $size="2rem"/>
-                <ProjectsGridSection> {projects.map(project => <Project
-                    key={project.name} {...project} />)} </ProjectsGridSection>
-                <Spacer $size="2rem"/>
-                <div style={{display: "flex", justifyContent: "center"}}>
-                    <Link to='/projects' className="button button--primary">More Projects</Link>
-                </div>
-            </section>
+        <section>
+            <Heading2Underline># Projects</Heading2Underline>
+            <Spacer $size="2rem"/>
+            <ProjectsGridSection> {projects.map(project => <Project
+                key={project.name} {...project} />)} </ProjectsGridSection>
+            <Spacer $size="2rem"/>
+            <div style={{display: "flex", justifyContent: "center"}}>
+                <Link to='/projects' className="button button--primary">More Projects</Link>
+            </div>
+        </section>
         <AboutMe myInfo={info}/>
         <Skills skills={skills}/>
     </>)
