@@ -43,15 +43,12 @@ const Contact = () => <div>
     <Spacer $size="6rem"/>
     <Heading2><span style={{color: "rgb(var(--primary))"}}>/</span>contacts</Heading2>
     <Spacer $size="0.5rem"/>
-    <p>Who am i?</p>
+    <p>Let's connect</p>
     <Spacer $size="3rem"/>
 
     <section>
         <div style={{display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "2rem"}}>
-            <AboutMeSection>
-                I’m interested in freelance opportunities. However, if you have other
-                request or question, don’t hesitate to contact me
-            </AboutMeSection>
+            <AboutMeSection> Please contact me with any questions or freelance inquiries.</AboutMeSection>
             <ContactSection>
                 <div style={{padding: "1rem", border: "1px solid rgb(var(--gray))", maxWidth: "max-content"}}>
                     <Heading3>Message me here</Heading3>

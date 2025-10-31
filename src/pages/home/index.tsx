@@ -86,29 +86,9 @@ const RandomQuote = styled.div`
     line-height: 180%;
     position: relative;
     text-align: center;
-
-    &::before {
-        content: "";
-        background-image: url(icons/quote.svg);
-        position: absolute;
-        left: -1rem;
-        top: -0.75rem;
-        width: 1rem;
-        height: 1.125rem;
-        object-fit: contain;
-    }
-
-    &::after {
-        content: "";
-        background-image: url(icons/quote.svg);
-        position: absolute;
-        transform: rotate(180deg);
-        right: -1rem;
-        top: 0.75rem;
-        width: 1rem;
-        height: 1.125rem;
-        object-fit: contain;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const ImageSection = styled.div`
@@ -138,7 +118,9 @@ const Hero: FC<{ intro: string; quote: string[] }> = ({intro, quote}) => {
         <ImageSection>
             <img src="images/profile-photo.png" alt="Josiah Mokobo Nyarega"/>
             <RandomQuote>
-                <span>{theQuote}, {from}</span>
+                <span>"{theQuote}"</span>
+                 ----
+                <span style={{maxWidth: "60ch", marginInline: "auto", textAlign: "center", fontStyle: "italic", fontSize: "0.75rem"}}> {from}</span>
             </RandomQuote>
         </ImageSection>
     </HeroSection>

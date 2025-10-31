@@ -1,359 +1,358 @@
 {
-  "intro": "I am a results-driven Full-Stack Engineer with a proven track record of building robust, secure, and user-friendly web applications. I leverage JavaScript, PHP, and Node.js to deliver efficient and scalable solutions. My experience extends across the entire web development lifecycle, coupled with strong communication, collaboration, and problem-solving skills. I am adept at optimizing performance, improving user experience, and driving operational efficiency.",
-  "cv_download_link": "https://github.com/jmnyarega/public-documents/raw/f9bd6340705dd3cb486e92c1274657a5340ff148/JOSIAH-MOKOBO-NYAREGA.pdf",
-  "info": [
-    "I am a passionate and accomplished Software Developer, adept in the art and science of crafting sophisticated web applications. My expertise spans PHP, JavaScript, NodeJs, Blazor, and Next.js—technologies with which I weave seamless, elegant solutions that are both robust and intuitive.",
-    "In my current role, I take great pride in transforming visionary design concepts into reality, skillfully implementing them using WordPress and PHP. I delight in developing bespoke plugins tailored to unique needs, tending to websites with meticulous care to ensure they perform flawlessly, and architecting reusable components demonstrating a harmonious balance of creativity and technical mastery across both the frontend and backend landscapes.",
-    "My journey thus far has been enriched by diverse experiences across frontend and full-stack positions, where I embraced challenges such as managing complex APIs, orchestrating databases, automating rigorous testing procedures, nurturing the growth of junior developers through mentorship, and lending my voice to project leadership. These roles have shaped me into a thoughtful leader and a deeply knowledgeable technologist.",
-    "Devoted to excellence, I am unwavering in my commitment to producing clean, high-quality code and elevating application performance. I maintain a keen interest in open source projects, eagerly contributing to and learning from the vibrant global community that fuels innovation and collaboration. Ever curious and eager, I pursue continuous learning to remain at the vanguard of evolving technological frontiers. Beyond the computer screen, I find joy and renewal in cycling—a refreshing pastime that clears my mind and invigorates my spirit."
-  ],
-  "blogs": [
-    {
-      "title": "WordPress for serious devs ( Part I)",
-      "url": "https://medium.com/@jmnyarega/wordpress-for-serious-devs-part-i-3d9780afe8df",
-      "excerpt": "WordPress has often been criticized for poorly built websites on the Internet. While I had a firm opinion against WordPress developers and never considered them as real developers, my view changed after I created a website using it.",
-      "published": "May 02, 2025",
-      "tags": [
-        "WordPress",
-        "Wordpress tools"
-      ]
+    "intro":  "I’m Josiah! This is my online space to share my [mention type of work, e.g., projects, writing, designs]. Take a look around!",
+    "cv_download_link": "https://github.com/jmnyarega/public-documents/raw/f9bd6340705dd3cb486e92c1274657a5340ff148/JOSIAH-MOKOBO-NYAREGA.pdf",
+    "info": [
+        "I'm a Software Developer with a passion for building robust and intuitive web applications. My expertise includes PHP, JavaScript, Node.js, Blazor, and Next.js, allowing me to create seamless solutions across the frontend and backend.",
+        "Currently, I translate design concepts into functional websites using WordPress and PHP, developing custom plugins and ensuring optimal performance. I enjoy architecting reusable components and mentoring junior developers. My experience spans frontend and full-stack roles, where I’ve managed complex APIs, orchestrated databases, automated testing, and contributed to project leadership.",
+        "I'm committed to writing clean, high-quality code and continuously improving application performance. I actively engage with the open-source community, seeking opportunities to learn and contribute. Outside of development, I enjoy cycling to stay refreshed and maintain a balanced perspective."
+    ],
+    "blogs": [
+        {
+            "title": "WordPress for serious devs ( Part I)",
+            "url": "https://medium.com/@jmnyarega/wordpress-for-serious-devs-part-i-3d9780afe8df",
+            "excerpt": "WordPress has often been criticized for poorly built websites on the Internet. While I had a firm opinion against WordPress developers and never considered them as real developers, my view changed after I created a website using it.",
+            "published": "May 02, 2025",
+            "tags": [
+                "WordPress",
+                "Wordpress tools"
+            ]
+        },
+        {
+            "title": "What is test-driven development?",
+            "url": "https://medium.com/@jmnyarega/what-is-test-driven-development-2c890977cbc3",
+            "excerpt": "Test-driven development (TDD), is an evolutionary approach to development that combines test-first development where you write a test before you write just enough production code to fulfil that test and refactoring. ",
+            "published": "Jun 13, 2017",
+            "tags": [
+                "Testing",
+                "TDD"
+            ]
+        },
+        {
+            "title": "Styling Audio tag",
+            "url": "https://medium.com/@jmnyarega/styling-audio-tag-bec5e2489d22",
+            "excerpt": "As a frontend developer, one of my biggest frustration is to style replaced elements. It can be a daunting task when on deadlines with designs to match.",
+            "published": "Sep 15, 2020",
+            "tags": [
+                "HTML",
+                "audio-tag"
+            ]
+        },
+        {
+            "title": "Git Commands I learnt this week",
+            "url": "https://medium.com/@jmnyarega/git-commands-i-learnt-this-week-654aeb774c2e",
+            "excerpt": "Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development",
+            "published": "Jul 15, 2020",
+            "tags": [
+                "Git",
+                "Github"
+            ]
+        },
+        {
+            "title": "What I know about object-oriented programming",
+            "url": "https://medium.com/@jmnyarega/what-i-know-about-object-oriented-programming-ba38571f1b1b",
+            "excerpt": "It is a programming paradigm based on the concept of, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods",
+            "published": "Jun 14, 2017",
+            "tags": [
+                "OOP",
+                "software design"
+            ]
+        },
+        {
+            "title": "Version Control(Git)",
+            "url": "https://medium.com/@jmnyarega/andela-bootcamp-experience-b0f2d3ef49bd",
+            "excerpt": "This is a software that helps software developers to work together and maintain a complete history of their work.",
+            "published": "Oct 10, 2016",
+            "tags": [
+                "Git",
+                "Github"
+            ]
+        }
+    ],
+    "skills": {
+        "primary": [
+            "ReactJs",
+            "Redux",
+            "graphql",
+            "Typescript",
+            "Javascript",
+            "NodeJs"
+        ],
+        "additional": [
+            "PHP",
+            "Laravel",
+            "WordPress",
+            "Symfony"
+        ],
+        "secondary": [
+            "Python",
+            "Flask",
+            "Django",
+            "D3js",
+            "C#",
+            "Blazor"
+        ],
+        "Domains": [
+            "Music",
+            "Sports",
+            "Healthcare",
+            "Finance"
+        ]
     },
-    {
-      "title": "What is test-driven development?",
-      "url": "https://medium.com/@jmnyarega/what-is-test-driven-development-2c890977cbc3",
-      "excerpt": "Test-driven development (TDD), is an evolutionary approach to development that combines test-first development where you write a test before you write just enough production code to fulfil that test and refactoring. ",
-      "published": "Jun 13, 2017",
-      "tags": [
-        "Testing",
-        "TDD"
-      ]
+    "projects": {
+        "complete applications": [
+            {
+                "name": "Cable Masters",
+                "description": "Provides solutions with which installations in industry, utility and infrastructure can be realized as quickly, safely and efficiently as possible. Cablemaster expertise and dedication go-to partner for safe and reliable installations.",
+                "code": "",
+                "liveUrl": "https://cablemasters.nl/",
+                "thumbnail": "https://cablemasters.nl/wp-content/uploads/2023/10/cropped-logo.webp",
+                "tags": [
+                    "ReactJs",
+                    "Javascript",
+                    "PHP",
+                    "Wordpress/Divi"
+                ]
+            },
+            {
+                "name": "Nobeach",
+                "description": "Nobeach is a Dutch travel agency website that specializes in beach-free vacations. They offer alternative vacation options that do not involve spending time at the beach",
+                "code": "",
+                "liveUrl": "https://www.nobeach-reizen.nl/",
+                "thumbnail": "images/no-beach.svg",
+                "tags": [
+                    "ReactJs",
+                    "Javascript",
+                    "PHP",
+                    "Wordpress/Divi"
+                ]
+            },
+            {
+                "name": "Geefinzicht",
+                "description": "This platform helps individuals connect with experts who can provide assistance with various health and wellness issues. The website features a diverse group of experts, including therapists, coaches, and healers, who offer guidance and support for a range of topics, from mental health to personal growth.",
+                "code": "",
+                "liveUrl": "https://geefinzicht.nl/",
+                "thumbnail": "images/geef-inzicht.png",
+                "tags": [
+                    "Laravel",
+                    "javascript",
+                    "Wordpress/Bedrock"
+                ]
+            },
+            {
+                "name": "Sportways",
+                "description": "SportWays offers a range of hockey camps for players of all ages and skill levels.",
+                "code": "",
+                "liveUrl": "https://sportways.com/",
+                "thumbnail": "images/sportways-logo.png",
+                "tags": [
+                    "Vuejs",
+                    "Symfony",
+                    "Javascript"
+                ]
+            },
+            {
+                "name": "Quirkycoders",
+                "description": "The project aims to help developers find new career opportunities by providing a platform to search for tech jobs.",
+                "liveUrl": "https://www.quirkycoders.com/",
+                "code": "",
+                "thumbnail": "images/quirkycoders.png",
+                "tags": [
+                    "ReactJs",
+                    "javascript",
+                    "NodeJs"
+                ]
+            },
+            {
+                "name": "Kentekencheck Search",
+                "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
+                "code": "",
+                "liveUrl": "https://www.kentekencheck.nu/zoek",
+                "thumbnail": "images/kentekencheck-logo-1.png",
+                "tags": [
+                    "Laravel",
+                    "Typescript",
+                    "Elastic Search"
+                ]
+            },
+            {
+                "name": "Our Giving Board",
+                "description": "The platform enables users to contribute funds to help each other in turns",
+                "liveUrl": "",
+                "code": "https://github.com/jmnyarega/ourgivingboard-web",
+                "thumbnail": "images/gifting-project.jpeg",
+                "tags": [
+                    "ReactJs",
+                    "javascript",
+                    "Ruby"
+                ]
+            },
+            {
+                "name": "Wazi",
+                "description": "The webpage promotes an anonymous digital therapy service that allows users to talk to a certified Kenyan therapist over the phone or through video/audio calls.",
+                "code": "",
+                "liveUrl": "https://www.wazi.co/",
+                "thumbnail": "https://static.wixstatic.com/media/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png/v1/fill/w_374,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png",
+                "tags": [
+                    "ReactJs",
+                    "Typescript",
+                    "Laravel"
+                ]
+            }
+        ],
+        "open source contributions/following": []
     },
-    {
-      "title": "Styling Audio tag",
-      "url": "https://medium.com/@jmnyarega/styling-audio-tag-bec5e2489d22",
-      "excerpt": "As a frontend developer, one of my biggest frustration is to style replaced elements. It can be a daunting task when on deadlines with designs to match.",
-      "published": "Sep 15, 2020",
-      "tags": [
-        "HTML",
-        "audio-tag"
-      ]
-    },
-    {
-      "title": "Git Commands I learnt this week",
-      "url": "https://medium.com/@jmnyarega/git-commands-i-learnt-this-week-654aeb774c2e",
-      "excerpt": "Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development",
-      "published": "Jul 15, 2020",
-      "tags": [
-        "Git",
-        "Github"
-      ]
-    },
-    {
-      "title": "What I know about object-oriented programming",
-      "url": "https://medium.com/@jmnyarega/what-i-know-about-object-oriented-programming-ba38571f1b1b",
-      "excerpt": "It is a programming paradigm based on the concept of, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods",
-      "published": "Jun 14, 2017",
-      "tags": [
-        "OOP",
-        "software design"
-      ]
-    },
-    {
-      "title": "Version Control(Git)",
-      "url": "https://medium.com/@jmnyarega/andela-bootcamp-experience-b0f2d3ef49bd",
-      "excerpt": "This is a software that helps software developers to work together and maintain a complete history of their work.",
-      "published": "Oct 10, 2016",
-      "tags": [
-        "Git",
-        "Github"
-      ]
+    "quotes": {
+        "quotes": [
+            [
+                "To me programming is more than an important practical art. It is also a gigantic undertaking in the frustrations of knowledge",
+                "Grace Hopper"
+            ],
+            [
+                "Do not stop thinking of life as an adventure. You have no security unless you can live bravely, excitingly, imaginatively; unless you can choose a challege instead of competence ",
+                "Eleanor Roosevelt"
+            ],
+            [
+                "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow and exclude people. So create",
+                "Why The Lucy Stiff"
+            ],
+            [
+                "Be curious, read widely. Try new things. I think a lot of what people call intelligence boils down to curiosity",
+                "Aaron Swartz (Programmer and internet hacktivist)"
+            ],
+            [
+                "The number one skill required for learning any complex system is patience",
+                "Kelsey Hightower  (Kubernetes The Hard Way)"
+            ],
+            [
+                "Documentation is a love letter that you write to your future self",
+                "Damian Conway (computer scientist)"
+            ],
+            [
+                "When we show up, act boldly, and practice the best ways to be wrong, we fail forward. No matter where we end up, we've grown from where we begam",
+                "Stacey Abram (Activist and founder of Fair Fight Action)"
+            ]
+        ],
+        "bookmarks": [
+            [
+                "One misconception many people have is that we need to listen to reply, whereas in reality, we need to listen to understand",
+                ""
+            ],
+            [
+                "Accept the fact that newer is not always better",
+                ""
+            ],
+            [
+                "14 Habits of Highly Productive Developers",
+                ""
+            ],
+            [
+                "The successful contributors don't just have the right skills and mindset: they build a contribution practice",
+                ""
+            ],
+            [
+                "Working on open source will challengr your technical abilities and force you to grow as a developer. In additional, you'll get  a crash in working in async systems, communication and consensus building, and distributed teams",
+                ""
+            ],
+            [
+                "Self-actualizations means the ability to turn a thought or concept in my head into something that exists in the world",
+                ""
+            ],
+            [
+                "How does a developer get context and build a history with a project? They do it by helping, interacting, filling bugs, engaging with issues, and reading pull requests discussions. They do it by sticking around and paying attention",
+                ""
+            ],
+            [
+                "At the end of the day, a maintainer is someone who cared enough go contribute to a project actively",
+                ""
+            ],
+            [
+                "The secret to successfully starting your open source career is knowing that unblocking yourself is part of the process",
+                ""
+            ],
+            [
+                "Human beings are downright awful at guessing other people's abilities",
+                ""
+            ],
+            [
+                "People don't know their capabilities",
+                ""
+            ],
+            [
+                "When you take any action, you break out of the cycle of passiveness and into the moment",
+                ""
+            ],
+            [
+                "Contributing to open source is an open game. An open game is a task where success has not been clearly defined",
+                ""
+            ],
+            [
+                "People fear they'll be exposed as a fraud when everyone can see their work. They worry they'll make mistakes, and their worst fears will be confirmed",
+                ""
+            ],
+            [
+                "It takes confidence to contribute to open source",
+                ""
+            ],
+            [
+                "I want to engage your critical thinking. Begin to see problems with libraries as potholes to be filled instead of obstacles to be avoided",
+                ""
+            ],
+            [
+                "Successfully contributors take notes while they work. When they hit something painful, they jot it down. Later, when they have time, they comb through those notes to see what could be better",
+                ""
+            ],
+            [
+                "Maintainers will prioritize changes that help the most common cases or prevent the most catastrophic ones",
+                ""
+            ],
+            [
+                "If you find a maintainer can't or won't accept your code consider making it into a library instead",
+                ""
+            ],
+            [
+                "If you keep a growth mindset and keep working, you'll be unstoppable",
+                ""
+            ],
+            [
+                "The beating heart of all established open source projects lives in the issues. From bug reports to feature requests to expressing gratitude to Maintainers - the issues are where communication happens and work gets done",
+                ""
+            ],
+            [
+                "The ability to share collective knowledge is a superpower, and lives in the documentation",
+                ""
+            ],
+            [
+                "Before you can find the opportunities and implement ideas, you'll have to gather some context and identify problems",
+                ""
+            ],
+            [
+                "Code is always a liability, Always",
+                ""
+            ],
+            [
+                "A refactor is when you change the code's structure, but you don't change the behaviour",
+                ""
+            ],
+            [
+                "For each change, make the change easy(warning: this may be hard), then make the easy change",
+                ""
+            ],
+            [
+                "Issues and pull requests are the primary sources of communication between open source Maintainers and the people who use their software",
+                ""
+            ],
+            [
+                "All feature requests are solving a problem. If that problem is unclear to you, it may be unclear to others. Ask questions or research the issue until you could explain the core problem to someone else",
+                ""
+            ],
+            [
+                "Clear communication isn't just a nice to have - it's pretty much a technical requirement",
+                ""
+            ],
+            [
+                "Good documentation says 'why' not 'how'",
+                ""
+            ]
+        ]
     }
-  ],
-  "skills": {
-    "primary": [
-      "ReactJs",
-      "Redux",
-      "graphql",
-      "Typescript",
-      "Javascript",
-      "NodeJs"
-    ],
-    "additional": [
-      "PHP",
-      "Laravel",
-      "WordPress",
-      "Symfony"
-    ],
-    "secondary": [
-      "Python",
-      "Flask",
-      "Django",
-      "D3js",
-      "C#",
-      "Blazor"
-    ],
-    "Domains": [
-      "Music",
-      "Sports",
-      "Healthcare",
-      "Finance"
-    ]
-  },
-  "projects": {
-    "complete applications": [
-      {
-        "name": "Cable Masters",
-        "description": "Provides solutions with which installations in industry, utility and infrastructure can be realized as quickly, safely and efficiently as possible. Cablemaster expertise and dedication go-to partner for safe and reliable installations.",
-        "code": "",
-        "liveUrl": "https://cablemasters.nl/",
-        "thumbnail": "https://cablemasters.nl/wp-content/uploads/2023/10/cropped-logo.webp",
-        "tags": [
-          "ReactJs",
-          "Javascript",
-          "PHP",
-          "Wordpress/Divi"
-        ]
-      },
-      {
-        "name": "Nobeach",
-        "description": "Nobeach is a Dutch travel agency website that specializes in beach-free vacations. They offer alternative vacation options that do not involve spending time at the beach",
-        "code": "",
-        "liveUrl": "https://www.nobeach-reizen.nl/",
-        "thumbnail": "images/no-beach.svg",
-        "tags": [
-          "ReactJs",
-          "Javascript",
-          "PHP",
-          "Wordpress/Divi"
-        ]
-      },
-      {
-        "name": "Geefinzicht",
-        "description": "This platform helps individuals connect with experts who can provide assistance with various health and wellness issues. The website features a diverse group of experts, including therapists, coaches, and healers, who offer guidance and support for a range of topics, from mental health to personal growth.",
-        "code": "",
-        "liveUrl": "https://geefinzicht.nl/",
-        "thumbnail": "images/geef-inzicht.png",
-        "tags": [
-          "Laravel",
-          "javascript",
-          "Wordpress/Bedrock"
-        ]
-      },
-      {
-        "name": "Sportways",
-        "description": "SportWays offers a range of hockey camps for players of all ages and skill levels.",
-        "code": "",
-        "liveUrl": "https://sportways.com/",
-        "thumbnail": "images/sportways-logo.png",
-        "tags": [
-          "Vuejs",
-          "Symfony",
-          "Javascript"
-        ]
-      },
-      {
-        "name": "Quirkycoders",
-        "description": "The project aims to help developers find new career opportunities by providing a platform to search for tech jobs.",
-        "liveUrl": "https://www.quirkycoders.com/",
-        "code": "",
-        "thumbnail": "images/quirkycoders.png",
-        "tags": [
-          "ReactJs",
-          "javascript",
-          "NodeJs"
-        ]
-      },
-      {
-        "name": "Kentekencheck Search",
-        "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
-        "code": "",
-        "liveUrl": "https://www.kentekencheck.nu/zoek",
-        "thumbnail": "images/kentekencheck-logo-1.png",
-        "tags": [
-          "Laravel",
-          "Typescript",
-          "Elastic Search"
-        ]
-      },
-      {
-        "name": "Our Giving Board",
-        "description": "The platform enables users to contribute funds to help each other in turns",
-        "liveUrl": "",
-        "code": "https://github.com/jmnyarega/ourgivingboard-web",
-        "thumbnail": "images/gifting-project.jpeg",
-        "tags": [
-          "ReactJs",
-          "javascript",
-          "Ruby"
-        ]
-      },
-      {
-        "name": "Wazi",
-        "description": "The webpage promotes an anonymous digital therapy service that allows users to talk to a certified Kenyan therapist over the phone or through video/audio calls.",
-        "code": "",
-        "liveUrl": "https://www.wazi.co/",
-        "thumbnail": "https://static.wixstatic.com/media/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png/v1/fill/w_374,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png",
-        "tags": [
-          "ReactJs",
-          "Typescript",
-          "Laravel"
-        ]
-      }
-    ],
-    "open source contributions/following": []
-  },
-  "quotes": {
-    "quotes": [
-      [
-        "To me programming is more than an important practical art. It is also a gigantic undertaking in the frustrations of knowledge",
-        "Grace Hopper"
-      ],
-      [
-        "Do not stop thinking of life as an adventure. You have no security unless you can live bravely, excitingly, imaginatively; unless you can choose a challege instead of competence ",
-        "Eleanor Roosevelt"
-      ],
-      [
-        "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow and exclude people. So create",
-        "Why The Lucy Stiff"
-      ],
-      [
-        "Be curious, read widely. Try new things. I think a lot of what people call intelligence boils down to curiosity",
-        "Aaron Swartz, Programmer and internet hacktivist"
-      ],
-      [
-        "The number one skill required for learning any complex system is patience",
-        "Kelsey Hightower, Kubernetes The Hard Way"
-      ],
-      [
-        "Documentation is a love letter that you write to your future self",
-        "Damian Conway, computer scientist"
-      ],
-      [
-        "When we show up, act boldly, and practice the best ways to be wrong, we fail forward. No matter where we end up, we've grown from where we begam",
-        "Stacey Abram, Activist and founder of Fair Fight Action"
-      ]
-    ],
-    "bookmarks": [
-      [
-        "One misconception many people have is that we need to listen to reply, whereas in reality, we need to listen to understand",
-        ""
-      ],
-      [
-        "Accept the fact that newer is not always better",
-        ""
-      ],
-      [
-        "14 Habits of Highly Productive Developers",
-        ""
-      ],
-      [
-        "The successful contributors don't just have the right skills and mindset: they build a contribution practice",
-        ""
-      ],
-      [
-        "Working on open source will challengr your technical abilities and force you to grow as a developer. In additional, you'll get  a crash in working in async systems, communication and consensus building, and distributed teams",
-        ""
-      ],
-      [
-        "Self-actualizations means the ability to turn a thought or concept in my head into something that exists in the world",
-        ""
-      ],
-      [
-        "How does a developer get context and build a history with a project? They do it by helping, interacting, filling bugs, engaging with issues, and reading pull requests discussions. They do it by sticking around and paying attention",
-        ""
-      ],
-      [
-        "At the end of the day, a maintainer is someone who cared enough go contribute to a project actively",
-        ""
-      ],
-      [
-        "The secret to successfully starting your open source career is knowing that unblocking yourself is part of the process",
-        ""
-      ],
-      [
-        "Human beings are downright awful at guessing other people's abilities",
-        ""
-      ],
-      [
-        "People don't know their capabilities",
-        ""
-      ],
-      [
-        "When you take any action, you break out of the cycle of passiveness and into the moment",
-        ""
-      ],
-      [
-        "Contributing to open source is an open game. An open game is a task where success has not been clearly defined",
-        ""
-      ],
-      [
-        "People fear they'll be exposed as a fraud when everyone can see their work. They worry they'll make mistakes, and their worst fears will be confirmed",
-        ""
-      ],
-      [
-        "It takes confidence to contribute to open source",
-        ""
-      ],
-      [
-        "I want to engage your critical thinking. Begin to see problems with libraries as potholes to be filled instead of obstacles to be avoided",
-        ""
-      ],
-      [
-        "Successfully contributors take notes while they work. When they hit something painful, they jot it down. Later, when they have time, they comb through those notes to see what could be better",
-        ""
-      ],
-      [
-        "Maintainers will prioritize changes that help the most common cases or prevent the most catastrophic ones",
-        ""
-      ],
-      [
-        "If you find a maintainer can't or won't accept your code consider making it into a library instead",
-        ""
-      ],
-      [
-        "If you keep a growth mindset and keep working, you'll be unstoppable",
-        ""
-      ],
-      [
-        "The beating heart of all established open source projects lives in the issues. From bug reports to feature requests to expressing gratitude to Maintainers - the issues are where communication happens and work gets done",
-        ""
-      ],
-      [
-        "The ability to share collective knowledge is a superpower, and lives in the documentation",
-        ""
-      ],
-      [
-        "Before you can find the opportunities and implement ideas, you'll have to gather some context and identify problems",
-        ""
-      ],
-      [
-        "Code is always a liability, Always",
-        ""
-      ],
-      [
-        "A refactor is when you change the code's structure, but you don't change the behaviour",
-        ""
-      ],
-      [
-        "For each change, make the change easy(warning: this may be hard), then make the easy change",
-        ""
-      ],
-      [
-        "Issues and pull requests are the primary sources of communication between open source Maintainers and the people who use their software",
-        ""
-      ],
-      [
-        "All feature requests are solving a problem. If that problem is unclear to you, it may be unclear to others. Ask questions or research the issue until you could explain the core problem to someone else",
-        ""
-      ],
-      [
-        "Clear communication isn't just a nice to have - it's pretty much a technical requirement",
-        ""
-      ],
-      [
-        "Good documentation says 'why' not 'how'",
-        ""
-      ]
-    ]
-  }
 }
